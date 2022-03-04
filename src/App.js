@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@emotion/react";
+import { Container } from "@mui/material";
+
+import SectionHeader from "./components/SectionHeader";
+import ResponsiveDrawer from "./components/ResponsiveDrawer";
+import Landing from "./components/Landing";
+import About from "./components/About";
+import ExperienceList from "./components/ExperienceList";
+import ProjectList from "./components/ProjectList";
+import SKillsList from "./components/SkillsList";
+import Education from "./components/Education";
+import theme from "./utils/theme";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <ResponsiveDrawer>
+        <Landing />
+        <section id="about">
+          <SectionHeader>About</SectionHeader>
+          <About />
+        </section>
+        <section id="experience">
+          <SectionHeader>Experience</SectionHeader>
+          <ExperienceList />
+        </section>
+        <section id="projects">
+          <SectionHeader>Projects</SectionHeader>
+          <ProjectList />
+        </section>
+        <section id="skills">
+          <SectionHeader>Skills</SectionHeader>
+          <SKillsList />
+        </section>
+        <section id="education">
+          <SectionHeader>Education</SectionHeader>
+          <Education />
+        </section>
+      </ResponsiveDrawer>
+    </ThemeProvider>
   );
 }
 

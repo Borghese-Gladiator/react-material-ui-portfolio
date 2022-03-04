@@ -1,0 +1,1 @@
+export const boldString = (str, substr) => str.replaceAll(substr, `<b>${substr}</b>`);
