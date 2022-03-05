@@ -18,18 +18,17 @@ import Typography from '@mui/material/Typography';
 
 import { styled } from '@mui/material/styles';
 
-const CenteredDiv = styled('div')(({ theme }) => ({
+const CenteredDiv = styled('div')({
   position: 'absolute',
   left: '50%',
   top: '50%',
   transform: 'translate(-50%, -50%)'
-}));
+});
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   backgroundColor: theme.palette.common.white,
   color: theme.palette.common.black
 }));
-const StyledTitle = styled(Typography)()
 const drawerWidth = 190;
 
 function ResponsiveDrawer(props) {
