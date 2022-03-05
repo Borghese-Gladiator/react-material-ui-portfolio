@@ -1,16 +1,16 @@
 import { Typography } from "@mui/material";
 import { styled } from '@mui/material/styles';
 
-const SectionWithBackground = styled('section')(({ theme }) => ({
+const SectionWithBackground = styled('section')({
   height: "100vh",
   backgroundImage: "url(/profile.jpg)",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center center"
-}));
-const AbsoluteDiv = styled('div')(({ theme }) => ({
+});
+const AbsoluteDiv = styled('div')({
   position: "absolute"
-}));
+});
 const ContrastTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.contrastText,
 }));
