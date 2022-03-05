@@ -16,6 +16,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
+import { styled } from '@mui/material/styles';
+
+const CenteredDiv = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  left: '50%',
+  top: '50%',
+  transform: 'translate(-50%, -50%)'
+}));
+const StyledAppBar = styled(AppBar)(({ theme }) => ({
+  boxShadow: "none",
+  backgroundColor: theme.palette.common.white,
+  color: theme.palette.common.black
+}));
+const StyledTitle = styled(Typography)()
 const drawerWidth = 190;
 
 function ResponsiveDrawer(props) {
@@ -28,7 +42,18 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <Toolbar />
+      <Box
+        mt={4}
+        ml={3}
+        mr={3}
+        mb={3}
+        sx={{
+          display: { xs: 'none', sm: 'block' },
+        }}
+      >
+        <Typography color="primary" variant="h4" component="div">Timothy<br />Shee</Typography>
+        <Typography variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
+      </Box>
       <Divider />
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -59,7 +84,7 @@ function ResponsiveDrawer(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar
+      <StyledAppBar
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -74,14 +99,16 @@ function ResponsiveDrawer(props) {
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
+            color="primary"
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
-          </Typography>
+          <CenteredDiv>
+            <Typography color="primary" variant="h5" component="div">Timothy Shee</Typography>
+            <Typography variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
+          </CenteredDiv>
         </Toolbar>
-      </AppBar>
+      </StyledAppBar>
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
@@ -116,9 +143,9 @@ function ResponsiveDrawer(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar />
+        <Toolbar sx={{ display: { xs: 'ineline', sm: 'none' } }}/>
         {children}
       </Box>
     </Box>
