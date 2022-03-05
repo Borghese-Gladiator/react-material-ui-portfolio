@@ -17,23 +17,23 @@ function App() {
       <ResponsiveDrawer>
         <Landing />
         <section id="about">
-          <SectionHeader>About</SectionHeader>
+          <SectionHeader>ABOUT</SectionHeader>
           <About />
         </section>
         <section id="experience">
-          <SectionHeader>Experience</SectionHeader>
+          <SectionHeader>EXPERIENCE</SectionHeader>
           <ExperienceList />
         </section>
         <section id="projects">
-          <SectionHeader>Projects</SectionHeader>
+          <SectionHeader>PROJECTS</SectionHeader>
           <ProjectList />
         </section>
         <section id="skills">
-          <SectionHeader>Skills</SectionHeader>
+          <SectionHeader>SKILLS</SectionHeader>
           <SKillsList />
         </section>
         <section id="education">
-          <SectionHeader>Education</SectionHeader>
+          <SectionHeader>EDUCATION</SectionHeader>
           <Education />
         </section>
       </ResponsiveDrawer>
