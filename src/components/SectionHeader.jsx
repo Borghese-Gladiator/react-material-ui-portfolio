@@ -1,15 +1,20 @@
 import { Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-const CustomTitle = styled(Typography)(({ theme }) => ({
+const StyledDiv = styled('div')(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
+  paddingTop: theme.spacing(1),
+  paddingBottom: theme.spacing(1)
 }));
 
-const SectionHeader = ({ children }) => {
+const SectionHeader = ({ children, theme }) => {
   return (
-    <CustomTitle variant="h4" gutterBottom component="div">
-      {children}
-    </CustomTitle>
+    <StyledDiv>
+      <Typography variant="h4" gutterBottom component="div">
+        {children}
+      </Typography>
+    </StyledDiv>
   )
 }
 
