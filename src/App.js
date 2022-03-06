@@ -1,5 +1,4 @@
 import { ThemeProvider } from "@emotion/react";
-import { Container } from "@mui/material";
 
 import SectionHeader from "./components/SectionHeader";
 import ResponsiveDrawer from "./components/ResponsiveDrawer";
