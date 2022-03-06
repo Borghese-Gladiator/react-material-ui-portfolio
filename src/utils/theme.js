@@ -5,6 +5,11 @@ const theme = createTheme({
   status: {
     danger: orange[500],
   },
+  palette: {
+    primary: {
+      main: '#008073',
+    },
+  },
 });
 
 export default theme;
