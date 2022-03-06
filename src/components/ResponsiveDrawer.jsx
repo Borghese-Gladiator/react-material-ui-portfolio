@@ -13,6 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Link } from '@mui/material';
 
 import { styled } from '@mui/material/styles';
 
@@ -46,21 +47,23 @@ function ResponsiveDrawer(props) {
         sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
       >
         <Typography color="primary" variant="h4" component="div">Timothy<br />Shee</Typography>
-        <Typography variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
+        <Typography color="secondary" variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
       </Box>
       <Divider />
       <List>
         {
           sidebarLinkList.map((sidebarLink, idx) => {
-            const { text, icon } = sidebarLink;
+            const { text, link, icon } = sidebarLink;
             const Icon = icon;
             return (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  <Icon />
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
+              <Link href={link} color="#333" underline="none">
+                <ListItem button key={text}>
+                  <ListItemIcon>
+                    <Icon sx={{ fontSize: 33 }} />
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItem>
+              </Link>
             )
           })
         }
