@@ -47,7 +47,7 @@ function ResponsiveDrawer(props) {
         mr={3}
         mb={3}
         sx={{
-          display: { xs: 'none', sm: 'block' },
+          display: { sm: 'none', md: 'block' },
         }}
       >
         <Typography color="primary" variant="h4" component="div">Timothy<br />Shee</Typography>
@@ -86,9 +86,9 @@ function ResponsiveDrawer(props) {
       <StyledAppBar
         position="fixed"
         sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-          display: { xs: 'block', sm: 'none' },
+          width: { md: `calc(100% - ${drawerWidth}px)` },
+          ml: { md: `${drawerWidth}px` },
+          display: { sm: 'block', md: 'none' },
         }}
       >
         <Toolbar>
@@ -97,7 +97,7 @@ function ResponsiveDrawer(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { md: 'none' } }}
             color="primary"
           >
             <MenuIcon />
@@ -110,7 +110,7 @@ function ResponsiveDrawer(props) {
       </StyledAppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -123,7 +123,7 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { sm: 'block', md: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
@@ -132,7 +132,7 @@ function ResponsiveDrawer(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
+            display: { sm: 'none', md: 'block' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           open
@@ -142,9 +142,9 @@ function ResponsiveDrawer(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, width: { md: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar sx={{ display: { xs: 'ineline', sm: 'none' } }}/>
+        <Toolbar sx={{ display: { sm: 'inline', md: 'none' } }}/>
         {children}
       </Box>
     </Box>
