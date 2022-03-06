@@ -18,18 +18,11 @@ import { styled } from '@mui/material/styles';
 
 import { drawerWidth, sidebarLinkList } from "../utils/constants";
 
-const CenteredDiv = styled('div')({
-  position: 'absolute',
-  left: '50%',
-  top: '50%',
-  transform: 'translate(-50%, -50%)'
-});
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   backgroundColor: theme.palette.common.white,
-}));
-const StyledIconButton = styled(IconButton)(({ theme }) => ({
-  color: "inherit",
+  paddingTop: theme.spacing(0.25),
+  paddingBottom: theme.spacing(0.25),
 }));
 
 function ResponsiveDrawer(props) {
@@ -47,6 +40,7 @@ function ResponsiveDrawer(props) {
         ml={3}
         mr={3}
         mb={3}
+        sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
       >
         <Typography color="primary" variant="h4" component="div">Timothy<br />Shee</Typography>
         <Typography variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
@@ -81,22 +75,25 @@ function ResponsiveDrawer(props) {
         sx={{
           width: { md: `calc(100% - ${drawerWidth}px)` },
           ml: { md: `${drawerWidth}px` },
-          display: { sm: 'block', md: 'none' },
+          display: { xs: 'block', sm: 'block', md: 'none' },
         }}
       >
         <Toolbar>
           <IconButton
-            color="primary"
+            size="large"
             edge="start"
+            color="primary"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' } }}
+            sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </IconButton>
-          <CenteredDiv>
-            <Typography color="primary" variant="h5">Timothy Shee</Typography>
-            <Typography color="secondary" variant="body2">Full Stack Developer</Typography>
-          </CenteredDiv>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: "center" }}>
+            <Typography color="primary" variant="h5" component="div">Timothy Shee</Typography>
+            <Typography color="secondary" variant="body2" component="div">Full Stack Developer</Typography>
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
         </Toolbar>
       </StyledAppBar>
       <Box
