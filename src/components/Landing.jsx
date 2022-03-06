@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 
 const Section = styled('section')({
   height: "100vh",
-  backgroundImage: "url(/profile.jpg)",
+  backgroundImage: "url(/img/profile.jpg)",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center center",
