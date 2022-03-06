@@ -20,7 +20,9 @@ const DivOverlay = styled('div')({
 })
 const StyledTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.contrastText,
+  textShadow: "1px 1px 5px rgb(0 0 0 / 50%)",
   paddingTop: theme.spacing(4),
+  paddingLeft: theme.spacing(1)
 }));
 const UnderlineText = styled('span')(({ theme }) => ({
   textDecoration: `underline ${theme.palette.primary.main} `
@@ -28,6 +30,8 @@ const UnderlineText = styled('span')(({ theme }) => ({
 const BorderText = styled('span')(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
+  paddingLeft: theme.spacing(1),
+  paddingRight: theme.spacing(1)
 }));
 
 export default function Landing() {
