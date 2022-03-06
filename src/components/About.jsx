@@ -5,7 +5,6 @@ const interests = ["React", "Material Design", "Blockchain"]
 
 const StyledBlockquote = styled('blockquote')({
   borderLeft: "5px solid #795548",
-  color: "#795548",
   margin: "20px 0",
   paddingLeft: "1.5rem"
 });
@@ -17,7 +16,7 @@ export default function About() {
   return (
     <Container>
       <StyledBlockquote>
-        <Typography variant="h4">Mission-driven full stack developer with a passion for thoughtful architecture, collaboration, and teaching</Typography>
+        <Typography variant="h4" color="secondary">Mission-driven full stack developer with a passion for thoughtful architecture, collaboration, and teaching</Typography>
       </StyledBlockquote>
       <Typography variant="h6" gutterBottom>
         I've always sought out opportunities and challenges that are meaningful to me. Although my professional path has taken many twists and turns - from touring and recording artist, to employee of the year at a non-protfit - I've never stopped engaging my passion to help others and solve problems.
