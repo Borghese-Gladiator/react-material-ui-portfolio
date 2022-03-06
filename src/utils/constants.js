@@ -44,7 +44,7 @@ export const sidebarLinkList = [
   {
     icon: (props) => <ArticleIcon {...props} />,
     text: "Resume",
-    link: "#resume"
+    link: "/doc/Timothy_Shee_Resume_2022.pdf"
   }
 ]
 
