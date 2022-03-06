@@ -24,6 +24,9 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   paddingTop: theme.spacing(0.25),
   paddingBottom: theme.spacing(0.25),
 }));
+const StyledBox = styled(Box)({
+  background: 'url(/img/bg.png) repeat'
+});
 
 function ResponsiveDrawer(props) {
   const { window, children } = props;
@@ -128,13 +131,13 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box
+      <StyledBox
         component="main"
         sx={{ flexGrow: 1, width: { md: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }} />
         {children}
-      </Box>
+      </StyledBox>
     </Box>
   );
 }
