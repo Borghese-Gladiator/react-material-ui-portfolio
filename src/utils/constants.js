@@ -1,4 +1,44 @@
 import { boldString } from "./utils";
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+
+export const drawerWidth = 190;
+export const sidebarLinkList = [
+  {
+    icon: () => <InboxIcon />,
+    text: "About",
+    link: "#about"
+  },
+  {
+    icon: () => <InboxIcon />,
+    text: "Experience",
+    link: "#experience"
+  },
+  {
+    icon: () => <InboxIcon />,
+    text: "Projects",
+    link: "#projects"
+  },
+  {
+    icon: () => <InboxIcon />,
+    text: "Skills",
+    link: "#skills"
+  },
+  {
+    icon: () => <InboxIcon />,
+    text: "Education",
+    link: "#education"
+  },
+  {
+    icon: () => <InboxIcon />,
+    text: "Contact",
+    link: "#contact"
+  },
+  {
+    icon: () => <InboxIcon />,
+    text: "Resume",
+    link: "#resume"
+  }
+]
 
 export const experienceList = [
   {

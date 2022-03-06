@@ -6,17 +6,17 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import { styled } from '@mui/material/styles';
+
+import { drawerWidth, sidebarLinkList } from "../utils/constants";
 
 const CenteredDiv = styled('div')({
   position: 'absolute',
@@ -27,9 +27,10 @@ const CenteredDiv = styled('div')({
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   backgroundColor: theme.palette.common.white,
-  color: theme.palette.common.black
 }));
-const drawerWidth = 190;
+const StyledIconButton = styled(IconButton)(({ theme }) => ({
+  color: "inherit",
+}));
 
 function ResponsiveDrawer(props) {
   const { window, children } = props;
@@ -46,34 +47,26 @@ function ResponsiveDrawer(props) {
         ml={3}
         mr={3}
         mb={3}
-        sx={{
-          display: { sm: 'none', md: 'block' },
-        }}
       >
         <Typography color="primary" variant="h4" component="div">Timothy<br />Shee</Typography>
         <Typography variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
       </Box>
       <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        {
+          sidebarLinkList.map((sidebarLink, idx) => {
+            const { text, icon } = sidebarLink;
+            const Icon = icon;
+            return (
+              <ListItem button key={text}>
+                <ListItemIcon>
+                  <Icon />
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            )
+          })
+        }
       </List>
     </div>
   );
@@ -93,18 +86,16 @@ function ResponsiveDrawer(props) {
       >
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
+            color="primary"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { md: 'none' } }}
-            color="primary"
           >
             <MenuIcon />
           </IconButton>
           <CenteredDiv>
-            <Typography color="primary" variant="h5" component="div">Timothy Shee</Typography>
-            <Typography variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
+            <Typography color="primary" variant="h5">Timothy Shee</Typography>
+            <Typography color="secondary" variant="body2">Full Stack Developer</Typography>
           </CenteredDiv>
         </Toolbar>
       </StyledAppBar>
@@ -123,7 +114,7 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { sm: 'block', md: 'none' },
+            display: { xs: 'block', sm: 'block', md: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
@@ -132,7 +123,7 @@ function ResponsiveDrawer(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { sm: 'none', md: 'block' },
+            display: { xs: 'none', sm: 'none', md: 'block' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           open
@@ -144,7 +135,7 @@ function ResponsiveDrawer(props) {
         component="main"
         sx={{ flexGrow: 1, width: { md: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar sx={{ display: { sm: 'inline', md: 'none' } }}/>
+        <Toolbar sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }} />
         {children}
       </Box>
     </Box>
