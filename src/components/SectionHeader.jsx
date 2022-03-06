@@ -4,14 +4,15 @@ import { styled } from '@mui/material/styles';
 const StyledDiv = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
-  paddingTop: theme.spacing(1),
-  paddingBottom: theme.spacing(1)
+  paddingLeft: theme.spacing(4),
+  paddingTop: theme.spacing(2),
+  paddingBottom: theme.spacing(2)
 }));
 
 const SectionHeader = ({ children, theme }) => {
   return (
     <StyledDiv>
-      <Typography variant="h4" gutterBottom component="div">
+      <Typography variant="h4" component="div">
         {children}
       </Typography>
     </StyledDiv>
