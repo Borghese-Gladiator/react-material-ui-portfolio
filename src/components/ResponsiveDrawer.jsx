@@ -46,7 +46,7 @@ function ResponsiveDrawer(props) {
         ml={3}
         mr={3}
         mb={3}
-        sx={{ display: displayObjMobile }}
+        sx={{ display: displayObjDesktop }}
       >
         <Typography color="primary" variant="h4" component="div">Timothy<br />Shee</Typography>
         <Typography color="secondary" variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
@@ -140,7 +140,7 @@ function ResponsiveDrawer(props) {
         component="main"
         sx={{ flexGrow: 1, width: { md: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar sx={{ display: displayObjDesktop }} />
+        <Toolbar sx={{ display: displayObjMobile }} />
         {children}
       </StyledBox>
     </Box>
