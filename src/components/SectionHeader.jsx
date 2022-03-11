@@ -6,7 +6,8 @@ const StyledDiv = styled('div')(({ theme }) => ({
   color: theme.palette.primary.contrastText,
   paddingLeft: theme.spacing(4),
   paddingTop: theme.spacing(4),
-  paddingBottom: theme.spacing(4)
+  paddingBottom: theme.spacing(4),
+  marginBottom: theme.spacing(6)
 }));
 
 const SectionHeader = ({ children, theme }) => {
