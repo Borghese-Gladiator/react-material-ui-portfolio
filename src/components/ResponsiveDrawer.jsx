@@ -13,15 +13,14 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-// import Link from '@mui/material/Link'
 import { Link } from '@mui/material';
 
 import { styled } from '@mui/material/styles';
 
 import { drawerWidth, sidebarLinkList } from "../utils/constants";
 
-const displayMobileShow = { xs: 'block', sm: 'block', md: 'none' }
-const displayMobileHide = { sm: 'none', md: 'block' }
+const mobileShow = { xs: 'block', sm: 'block', md: 'none' }
+const mobileHide = { sm: 'none', md: 'block' }
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   backgroundColor: theme.palette.common.white,
@@ -84,7 +83,7 @@ function ResponsiveDrawer(props) {
         sx={{
           width: { md: `calc(100% - ${drawerWidth}px)` },
           ml: { md: `${drawerWidth}px` },
-          display: { xs: 'block', sm: 'block', md: 'none' },
+          display: { displayMobileShow: mobileShow },
         }}
       >
         <Toolbar>
@@ -120,7 +119,7 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{            
-            display: { displayMobileShow },
+            display: { displayMobileShow: mobileShow },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
@@ -129,7 +128,7 @@ function ResponsiveDrawer(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { displayMobileHide },
+            display: { displayMobileHide: mobileHide },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           open
@@ -141,7 +140,7 @@ function ResponsiveDrawer(props) {
         component="main"
         sx={{ flexGrow: 1, width: { md: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar sx={{ display: displayMobileShow }} />
+        <Toolbar sx={{ display: mobileShow }} />
         {children}
       </StyledBox>
     </Box>
