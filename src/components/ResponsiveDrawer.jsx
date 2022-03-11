@@ -19,8 +19,8 @@ import { styled } from '@mui/material/styles';
 
 import { drawerWidth, sidebarLinkList } from "../utils/constants";
 
-const displayObjMobileShow = { xs: 'block', sm: 'block', md: 'none' }
-const displayObjMobileHide = { xs: 'none',sm: 'none', md: 'block' }
+const displayObjMobile = { xs: 'block', sm: 'block', md: 'none' }
+const displayObjDesktop = { xs: 'none', sm: 'none', md: 'block' }
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   backgroundColor: theme.palette.common.white,
@@ -46,7 +46,7 @@ function ResponsiveDrawer(props) {
         ml={3}
         mr={3}
         mb={3}
-        sx={{ display: displayObjMobileHide }}
+        sx={{ display: displayObjMobile }}
       >
         <Typography color="primary" variant="h4" component="div">Timothy<br />Shee</Typography>
         <Typography color="secondary" variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
@@ -83,7 +83,7 @@ function ResponsiveDrawer(props) {
         sx={{
           width: { md: `calc(100% - ${drawerWidth}px)` },
           ml: { md: `${drawerWidth}px` },
-          display: { displayMobileShow: mobileShow },
+          display: displayObjMobile,
         }}
       >
         <Toolbar>
@@ -119,7 +119,7 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{            
-            display: displayObjMobileShow,
+            display: displayObjMobile,
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
@@ -128,7 +128,7 @@ function ResponsiveDrawer(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: displayObjMobileHide,
+            display: displayObjDesktop,
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           open
@@ -140,7 +140,7 @@ function ResponsiveDrawer(props) {
         component="main"
         sx={{ flexGrow: 1, width: { md: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar sx={{ display: mobileShow }} />
+        <Toolbar sx={{ display: displayObjDesktop }} />
         {children}
       </StyledBox>
     </Box>
