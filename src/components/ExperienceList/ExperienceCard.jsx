@@ -20,8 +20,23 @@ const ItalicTypography = styled(Typography)({
   fontStyle: "italic"
 });
 
+
+const DateItalicizedTypography = ({ date }) => {
+  return (
+    <>
+      <Typography variant="subtitle1" component="span">
+        {date.split("Present")[0]}
+      </Typography>
+      <ItalicTypography variant="subtitle1" component="span">
+        Present
+      </ItalicTypography>
+    </>
+  )
+}
+
 export default function ExperienceCard({ experience, id }) {
   const { logoPath, company, position, summary, bullets, date, location } = experience;
+
   return (
     <StyledCard>
       <Box sx={{ display: 'flex', alignItems: 'center' }} m={3}>
@@ -55,7 +70,9 @@ export default function ExperienceCard({ experience, id }) {
         </ul>
       </CardContent>
       <CardContent>
-      <Typography variant="subtitle1">{date} | {location}</Typography>
+        <Typography variant="subtitle1">
+          {date.includes("Present") ? <DateItalicizedTypography date={date} /> : date} | {location}
+        </Typography>
       </CardContent>
     </StyledCard>
   );
