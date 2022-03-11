@@ -20,6 +20,8 @@ import { styled } from '@mui/material/styles';
 
 import { drawerWidth, sidebarLinkList } from "../utils/constants";
 
+const displayMobileShow = { xs: 'block', sm: 'block', md: 'none' }
+const displayMobileHide = { sm: 'none', md: 'block' }
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   backgroundColor: theme.palette.common.white,
@@ -117,8 +119,8 @@ function ResponsiveDrawer(props) {
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
-          sx={{
-            display: { xs: 'block', sm: 'block', md: 'none' },
+          sx={{            
+            display: { displayMobileShow },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
@@ -127,7 +129,7 @@ function ResponsiveDrawer(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'none', md: 'block' },
+            display: { displayMobileHide },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           open
@@ -139,7 +141,7 @@ function ResponsiveDrawer(props) {
         component="main"
         sx={{ flexGrow: 1, width: { md: `calc(100% - ${drawerWidth}px)` } }}
       >
-        <Toolbar sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }} />
+        <Toolbar sx={{ display: displayMobileShow }} />
         {children}
       </StyledBox>
     </Box>
