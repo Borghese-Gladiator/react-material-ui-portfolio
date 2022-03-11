@@ -1,4 +1,32 @@
-# Getting Started with Create React App
+# 2022 Portfolio
+Created a cleaner portfolio to display my skills (took inspiration from Andrew Borstein's portfolio as seen in Medium article)
+
+## Technologies
+- React 17+ (create-react-app)
+- Material UI v5.4.4 
+  - @emotion theming and styled components (as opposed to makeStyles)
+  - @mui/material core library
+  - @mui/icons-material has many more icons than before
+
+## Features
+- Responsive content (navbar and cards)
+
+## Development Features
+- PropTypes checking on components
+- Custom Theming with constants in theme.js
+- Styled components written with @emotion (built-in styling from Material UI)
+
+## Implementation
+- npx create-react-app
+- created all components to be used (ResponsiveDrawer (Sidebar + Appbar), Landing, About, Experience, Projects, Skills, Education, Contact)
+- loaded custom theme from theme.js in utils
+- created custom theming using [https://material.io/inline-tools/color/](https://material.io/inline-tools/color/)
+- created background CSS using site and Hex to RGB Color Converter [https://www.magicpattern.design/tools/css-backgrounds](https://www.magicpattern.design/tools/css-backgrounds)
+
+#### Bug Fixes
+- CSS opacity only applies on images. When applying opacity to background image, use an overlay with backgroundColor rgba.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
