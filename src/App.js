@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@emotion/react";
+import { styled } from '@mui/material/styles';
 
 import SectionHeader from "./components/SectionHeader";
 import ResponsiveDrawer from "./components/ResponsiveDrawer";
@@ -10,31 +11,35 @@ import SKillsList from "./components/SkillsList";
 import Education from "./components/Education";
 import theme from "./utils/theme";
 
+const StyledSection = styled('section')(({ theme }) => ({
+  marginBottom: theme.spacing(6)
+}));
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <ResponsiveDrawer>
         <Landing />
-        <section id="about">
+        <StyledSection id="about">
           <SectionHeader>ABOUT</SectionHeader>
           <About />
-        </section>
-        <section id="experience">
+        </StyledSection> 
+        <StyledSection id="experience">
           <SectionHeader>EXPERIENCE</SectionHeader>
           <ExperienceList />
-        </section>
-        <section id="projects">
+        </StyledSection> 
+        <StyledSection id="projects">
           <SectionHeader>PROJECTS</SectionHeader>
           <ProjectList />
-        </section>
-        <section id="skills">
+        </StyledSection> 
+        <StyledSection id="skills">
           <SectionHeader>SKILLS</SectionHeader>
           <SKillsList />
-        </section>
-        <section id="education">
+        </StyledSection> 
+        <StyledSection id="education">
           <SectionHeader>EDUCATION</SectionHeader>
           <Education />
-        </section>
+        </StyledSection> 
       </ResponsiveDrawer>
     </ThemeProvider>
   );
