@@ -70,7 +70,7 @@ export default function ExperienceCard({ experience, id }) {
         </ul>
       </CardContent>
       <CardContent>
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle2">
           {date.includes("Present") ? <DateItalicizedTypography date={date} /> : date} | {location}
         </Typography>
       </CardContent>
