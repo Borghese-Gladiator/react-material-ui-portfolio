@@ -63,7 +63,10 @@ function ResponsiveDrawer(props) {
                   <ListItemIcon>
                     <Icon sx={{ fontSize: 33 }} />
                   </ListItemIcon>
-                  <ListItemText primary={text} />
+                  <ListItemText
+                    disableTypography
+                    primary={<Typography variant="body2" color="#333">{text}</Typography>}
+                  />
                 </ListItem>
               </Link>
             )
@@ -118,7 +121,7 @@ function ResponsiveDrawer(props) {
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
-          sx={{            
+          sx={{
             display: displayObjMobile,
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
