@@ -1,4 +1,4 @@
-import { boldString } from "./utils";
+import { boldString as b } from "./utils";
 import PersonIcon from '@mui/icons-material/Person';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import WebIcon from '@mui/icons-material/Web';
@@ -133,17 +133,75 @@ export const experienceList = [
   }
 ]
 
+let arrUsers = [<li>Steve</li>,<li>Bob</li>,<li>Michael</li>];
+
 export const projectList = [
   {
-    title: "",
-    about: "",
+    imgPath: "/img/avid_logo.png",
+    title: "Word Wolf Game",
+    about: "Discord bot to play word wolf with friends online in a server",
     tech: [
-      `${boldString("Ruby on Rails")} backend`,
-      `${boldString("Material UI")} frontend`,
+      <li>Implemented Word Wolf - mafia-like party game where all players except one are assigned the same word and they guess the odd one out.</li>,
+      <li>Used {b("Python")} and {b("discord.py")} to write bot commands and game logic</li>,
+      <li>Deployed bot to {b("Heroku")} using CLI</li>,
+      <li>Loaded Discord API secrets with {b("python-dotenv")}</li>,
     ],
-    github: "link",
-    demo: "link"
-  }
+    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
+    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+  },
+  {
+    imgPath: "/img/Google-Cloud-Platform-900x400-1-f271840dfc78154b57918cf2071e2fbb.jpg",
+    title: "Sentiment Analysis in GCP",
+    about: "Deployed containerized Flask app to Google Cloud Platform using Google Kubernetes Engine (GKE)",
+    tech: [
+      <li>Wrote Naive Bayes Sentiment analysis classifier with {b("NLTK")}</li>,
+      <li>Loaded model from PKL file and exposed calls with {b("Flask")} REST API</li>,
+      <li>Created {b("GKE")} cluster and managed auto scaling</li>,
+      <li>Uploaded {b("Docker")} image to {b("Google Artifact Registry")}</li>,
+      <li>Deployed app to cluster and exposed to internet</li>,
+    ],
+    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
+    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+  },
+  {
+    imgPath: "/img/avid_logo.png",
+    title: "Word Wolf Game",
+    about: "Discord bot to play word wolf with friends online in a server",
+    tech: [
+      <li>Implemented Word Wolf - mafia-like party game where all players except one are assigned the same word and they guess the odd one out.</li>,
+      <li>Used {b("discord.py")} and {b("Python")} to write bot commands and game logic</li>,
+      <li>Deployed bot to {b("Heroku")} using CLI</li>,
+      <li>Loaded Discord secrets with {b("python-dotenv")}</li>,
+    ],
+    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
+    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+  },
+  {
+    imgPath: "/img/avid_logo.png",
+    title: "Word Wolf Game",
+    about: "Discord bot to play word wolf with friends online in a server",
+    tech: [
+      <li>Implemented Word Wolf - mafia-like party game where all players except one are assigned the same word and they guess the odd one out.</li>,
+      <li>Used {b("discord.py")} and {b("Python")} to write bot commands and game logic</li>,
+      <li>Deployed bot to {b("Heroku")} using CLI</li>,
+      <li>Loaded Discord secrets with {b("python-dotenv")}</li>,
+    ],
+    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
+    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+  },
+  {
+    imgPath: "/img/avid_logo.png",
+    title: "Word Wolf Game",
+    about: "Discord bot to play word wolf with friends online in a server",
+    tech: [
+      <li>Implemented Word Wolf - mafia-like party game where all players except one are assigned the same word and they guess the odd one out.</li>,
+      <li>Used {b("discord.py")} and {b("Python")} to write bot commands and game logic</li>,
+      <li>Deployed bot to {b("Heroku")} using CLI</li>,
+      <li>Loaded Discord secrets with {b("python-dotenv")}</li>,
+    ],
+    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
+    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+  },
 ]
 
 export const skillsList = [
