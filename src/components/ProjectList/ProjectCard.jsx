@@ -10,12 +10,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 import CloseIcon from '@mui/icons-material/Close';
 
-const StyledCardMedia = styled(CardMedia)({
+const StyledImg = styled("img")({
+  maxHeight: 240,
   width: "100%",
-  height: "100%"
-});
-const StyledProfileImg = styled("img")({
-  height: 240,
+  objectFit: "cover",
   borderRadius: "2px 2px 0 0",
 })
 const UnstyledList = styled('ul')({
@@ -81,7 +79,7 @@ export default function ProjectCard({ project, id }) {
           :
           <>
             <CardActionArea onClick={toggle}>
-              <StyledProfileImg
+              <StyledImg
                 src={imgPath}
               />
             </CardActionArea>
