@@ -26,6 +26,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.common.white,
   paddingTop: theme.spacing(0.25),
   paddingBottom: theme.spacing(0.25),
+  boxShadow: "0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%)"
 }));
 const StyledBox = styled(Box)({
   background: 'url(/img/bg.png) repeat'
