@@ -22,7 +22,6 @@ import { drawerWidth, sidebarLinkList } from "../utils/constants";
 const displayObjMobile = { xs: 'block', sm: 'block', md: 'none' }
 const displayObjDesktop = { xs: 'none', sm: 'none', md: 'block' }
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  boxShadow: "none",
   backgroundColor: theme.palette.common.white,
   paddingTop: theme.spacing(0.25),
   paddingBottom: theme.spacing(0.25),
