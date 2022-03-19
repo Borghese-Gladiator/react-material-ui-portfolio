@@ -46,7 +46,7 @@ export default function ExperienceCard({ experience, id }) {
         <Typography variant="h6" color="secondary" sx={{ display: displayObjDesktop }}>{position}</Typography>
       </Box>
       <Divider />
-      <CardContent>
+      <CardContent sx={{ lineHeight: "1.8" }}>
         <Typography variant="h6" color="secondary" sx={{ display: displayObjMobile }}>{position}</Typography>
         <ItalicTypography variant="body1">{summary}</ItalicTypography>
         <ul>
@@ -54,18 +54,18 @@ export default function ExperienceCard({ experience, id }) {
             if (typeof val === 'object' && val !== null) {
               return (
                 <React.Fragment key={`experience${id}-bullet${idx}-nested`}>
-                  <li><Typography variant="h5">{val.title}</Typography></li>
+                  <li><Typography variant="body1">{val.title}</Typography></li>
                   <ul>
                     {val.bullets.map((val, idx2) => {
                       return (
-                        <li key={`experience${id}-bullet${idx}-nested${idx2}`}><Typography variant="subtitle1">{val}</Typography></li>
+                        <li key={`experience${id}-bullet${idx}-nested${idx2}`}><Typography variant="body1">{val}</Typography></li>
                       )
                     })}
                   </ul>
                 </React.Fragment>
               )
             }
-            return <li key={`experience${id}-bullet${idx}`}><Typography variant="body2">{val}</Typography></li>;
+            return <li key={`experience${id}-bullet${idx}`}><Typography variant="body1">{val}</Typography></li>;
           })}
         </ul>
       </CardContent>
