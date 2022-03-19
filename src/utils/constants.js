@@ -208,6 +208,18 @@ export const projectList = [
     githubLink: "https://github.com/Borghese-Gladiator/netlify-cms-gatsby-1",
     demoLink: "https://first-gatsby-headless-cms.netlify.app/"
   },
+  {
+    imgPath: "/img/pwa_app.png",
+    title: "PusherCoins Crypto Pricing",
+    about: "React realtime PWA (Progressive Webapp) using PusherCoins API to track cryptocurrency prices",
+    tech: [
+      <li>React and Bootstrap 4 to display prices</li>,
+      <li>Lighthouse audit and Webpack source-map-explorer to analyze bundle</li>,
+      <li>Deployed CRA app to Heroku with Pusher API keys in ENV variables</li>,
+    ],
+    githubLink: "https://github.com/Borghese-Gladiator/pushercoins",
+    demoLink: "https://tutorial-pushercoins.herokuapp.com/"
+  },
 ]
 
 export const skillsList = [
@@ -215,4 +227,27 @@ export const skillsList = [
     name: "GitHub",
     path: "/img/avid_logo.png"
   }
+]
+
+export const languageList = [
+  {
+    name: "English",
+    proficiencyText: "Native",
+    value: 100
+  },
+  {
+    name: "Chinese",
+    proficiencyText: "Professional working proficiency",
+    value: 80
+  },
+  {
+    name: "Japanese",
+    proficiencyText: "Proficient",
+    value: 60
+  },
+  {
+    name: "Spanish",
+    proficiencyText: "Elementary proficiency",
+    value: 30
+  },
 ]
