@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
 import Container from '@mui/material/Container';
-import { languageList } from "../../utils/constants";
+import { languageList } from "../utils/constants";
 
 const StyledHeader = styled("h3")({
   marginBottom: 0
