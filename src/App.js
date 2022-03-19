@@ -8,6 +8,7 @@ import About from "./components/About";
 import ExperienceList from "./components/ExperienceList";
 import ProjectList from "./components/ProjectList";
 import SKillsList from "./components/SkillsList";
+import LanguageList from "./components/LanguageList";
 import Education from "./components/Education";
 import theme from "./utils/theme";
 
@@ -35,6 +36,7 @@ function App() {
         <StyledSection id="skills">
           <SectionHeader>SKILLS</SectionHeader>
           <SKillsList />
+          <LanguageList />
         </StyledSection> 
         <StyledSection id="education">
           <SectionHeader>EDUCATION</SectionHeader>
