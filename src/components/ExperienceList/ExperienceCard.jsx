@@ -54,11 +54,11 @@ export default function ExperienceCard({ experience, id }) {
             if (typeof val === 'object' && val !== null) {
               return (
                 <React.Fragment key={`experience${id}-bullet${idx}-nested`}>
-                  <li><Typography variant="body2">{val.title}</Typography></li>
+                  <li><Typography variant="h5">{val.title}</Typography></li>
                   <ul>
                     {val.bullets.map((val, idx2) => {
                       return (
-                        <li key={`experience${id}-bullet${idx}-nested${idx2}`}><Typography variant="body2">{val}</Typography></li>
+                        <li key={`experience${id}-bullet${idx}-nested${idx2}`}><Typography variant="subtitle1">{val}</Typography></li>
                       )
                     })}
                   </ul>
