@@ -190,8 +190,9 @@ export const projectList = [
     title: "Novel Auto Scroller",
     about: "Chrome extension to automatically scroll down web page on novel site",
     tech: [
-      <li>Used manifest.js to ensure extension only runs on novel website</li>,
+      <li>Used manifest.js to ensure extension only runs on reading novels website</li>,
       <li>Wrote {b("Vanilla JS")} to remove ads and scroll every 10 seconds</li>,
+      <li>Used Chrome Developer Mode to add extension (store requires money for Google Developer License)</li>,
     ],
     githubLink: "https://github.com/Borghese-Gladiator/auto-scroller-chrome-extension",
   },
