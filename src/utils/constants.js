@@ -129,7 +129,7 @@ export const experienceList = [
       "Created Jenkins pipelines and executors to download nightly builds from internal server and run Windows Batch scripts automatically to test the installers."
     ],
     date: "Jul 2018 - Aug 2018",
-    location: "Boston, MA"
+    location: "Burlington, MA"
   }
 ]
 
