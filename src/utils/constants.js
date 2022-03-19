@@ -133,11 +133,9 @@ export const experienceList = [
   }
 ]
 
-let arrUsers = [<li>Steve</li>,<li>Bob</li>,<li>Michael</li>];
-
 export const projectList = [
   {
-    imgPath: "/img/avid_logo.png",
+    imgPath: "/img/Discord-Logo.png",
     title: "Word Wolf Game",
     about: "Discord bot to play word wolf with friends online in a server",
     tech: [
@@ -150,7 +148,7 @@ export const projectList = [
     demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
   },
   {
-    imgPath: "/img/Google-Cloud-Platform-900x400-1-f271840dfc78154b57918cf2071e2fbb.jpg",
+    imgPath: "/img/Google-Cloud-Platform-GCP-Logo.png",
     title: "Sentiment Analysis in GCP",
     about: "Deployed containerized Flask app to Google Cloud Platform using Google Kubernetes Engine (GKE)",
     tech: [
@@ -160,47 +158,54 @@ export const projectList = [
       <li>Uploaded {b("Docker")} image to {b("Google Artifact Registry")}</li>,
       <li>Deployed app to cluster and exposed to internet</li>,
     ],
-    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
-    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+    githubLink: "https://github.com/Borghese-Gladiator/first-docker-gcp",
   },
   {
-    imgPath: "/img/avid_logo.png",
-    title: "Word Wolf Game",
-    about: "Discord bot to play word wolf with friends online in a server",
+    imgPath: "/img/person_walking_acceloremeter_signal.png",
+    title: "Gait Gender Classification",
+    about: "Classified gender by gait (manner of walking) using features from phone accelerometer data",
     tech: [
-      <li>Implemented Word Wolf - mafia-like party game where all players except one are assigned the same word and they guess the odd one out.</li>,
-      <li>Used {b("discord.py")} and {b("Python")} to write bot commands and game logic</li>,
-      <li>Deployed bot to {b("Heroku")} using CLI</li>,
-      <li>Loaded Discord secrets with {b("python-dotenv")}</li>,
+      <li>Collected accelerometer from 3 subjects and filtered signal using {b("scipy")}</li>,
+      <li>Preprocssed data with {b("numpy")} and {b("pandas")}</li>,
+      <li>Extracted signal features - Mean, Variance, Entropy, Peak Count, Dominant Frequency</li>,
+      <li>Trained {b("sklearn")} Decision Tree, GradientBoost, RandomForest classifiers</li>
     ],
-    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
-    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+    githubLink: "https://github.com/Borghese-Gladiator/classify-gender-by-walking",
   },
   {
-    imgPath: "/img/avid_logo.png",
-    title: "Word Wolf Game",
-    about: "Discord bot to play word wolf with friends online in a server",
+    imgPath: "/img/valorant_logo.png",
+    title: "Valorant Lineups",
+    about: "Used Next.js and Chakra UI to Sort gallery using map, agent, site and attack/defense",
     tech: [
-      <li>Implemented Word Wolf - mafia-like party game where all players except one are assigned the same word and they guess the odd one out.</li>,
-      <li>Used {b("discord.py")} and {b("Python")} to write bot commands and game logic</li>,
-      <li>Deployed bot to {b("Heroku")} using CLI</li>,
-      <li>Loaded Discord secrets with {b("python-dotenv")}</li>,
+      <li>Injected file paths object at buildtime into {b("Next.js")} using getStaticProps</li>,
+      <li>Used {b("React Context")} to hold user selections</li>,
+      <li>Used Chakra UI components for Radio buttons</li>,
+      <li>Deployed app to {b("Vercel")} JAMStack platform</li>
     ],
-    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
-    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+    githubLink: "https://github.com/Borghese-Gladiator/valorant-lineups",
+    demoLink: "https://valorant-lineups-six.vercel.app/"
   },
   {
-    imgPath: "/img/avid_logo.png",
-    title: "Word Wolf Game",
-    about: "Discord bot to play word wolf with friends online in a server",
+    imgPath: "/img/chrome_extension_image.jpeg",
+    title: "Novel Auto Scroller",
+    about: "Chrome extension to automatically scroll down web page on novel site",
     tech: [
-      <li>Implemented Word Wolf - mafia-like party game where all players except one are assigned the same word and they guess the odd one out.</li>,
-      <li>Used {b("discord.py")} and {b("Python")} to write bot commands and game logic</li>,
-      <li>Deployed bot to {b("Heroku")} using CLI</li>,
-      <li>Loaded Discord secrets with {b("python-dotenv")}</li>,
+      <li>Used manifest.js to ensure extension only runs on novel website</li>,
+      <li>Wrote {b("Vanilla JS")} to remove ads and scroll every 10 seconds</li>,
     ],
-    githubLink: "https://github.com/Borghese-Gladiator/discord-word-wolf-bot",
-    demoLink: "https://discord-word-wolf-bot.herokuapp.com/"
+    githubLink: "https://github.com/Borghese-Gladiator/auto-scroller-chrome-extension",
+  },
+  {
+    imgPath: "/img/post-netlifycms-1200x630.jpg",
+    title: "Gatsby.js Blog with Netlify CMS",
+    about: "Used Gatsby.js to write a blog site and Netlify CMS to manage blog content",
+    tech: [
+      <li>Admins manage content using Headless CMS from Netlify</li>,
+      <li>Hosted Markdown content on {b("Netlify")} JAMStack</li>,
+      <li>Developed blog site with {b("Gatsby.js")} (React library)</li>,
+    ],
+    githubLink: "https://github.com/Borghese-Gladiator/netlify-cms-gatsby-1",
+    demoLink: "https://first-gatsby-headless-cms.netlify.app/"
   },
 ]
 
