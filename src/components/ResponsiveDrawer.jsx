@@ -58,8 +58,9 @@ function ResponsiveDrawer(props) {
           sidebarLinkList.map((sidebarLink, idx) => {
             const { text, link, icon } = sidebarLink;
             const Icon = icon;
+            const _target = text === "Resume" ? "_blank" : "_self";
             return (
-              <Link key={text} href={link} color="#333" underline="none">
+              <Link key={text} href={link} target={_target} color="#333" underline="none">
                 <ListItem button>
                   <ListItemIcon>
                     <Icon sx={{ fontSize: 33 }} />
