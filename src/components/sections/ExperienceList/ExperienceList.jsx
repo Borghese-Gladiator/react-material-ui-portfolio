@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import ExperienceCard from "./ExperienceCard";
-import { experienceList } from "../../utils/constants";
+import { experienceList } from "../../../utils/constants";
 
 const StyledBox =  styled(Box)(({ theme }) => ({
   display: 'flex',

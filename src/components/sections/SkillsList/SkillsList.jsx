@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles';
 import { Box } from "@mui/material";
 import SkillsCard from "./SkillsCard";
-import { skillsList } from "../../utils/constants";
+import { skillsList } from "../../../utils/constants";
 
 const StyledBox =  styled(Box)(({ theme }) => ({
   display: 'flex',

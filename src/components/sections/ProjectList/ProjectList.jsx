@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import ProjectCard from "./ProjectCard";
-import { projectList } from "../../utils/constants";
+import { projectList } from "../../../utils/constants";
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: 'flex',

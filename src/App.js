@@ -5,12 +5,12 @@ import SectionHeader from "./components/SectionHeader";
 import ResponsiveDrawer from "./components/ResponsiveDrawer";
 import Landing from "./components/Landing";
 import About from "./components/About";
-import ExperienceList from "./components/ExperienceList";
-import ProjectList from "./components/ProjectList";
-import SKillsList from "./components/SkillsList";
-import LanguageList from "./components/LanguageList";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
+import ExperienceList from "./components/sections/ExperienceList";
+import ProjectList from "./components/sections/ProjectList";
+import SKillsList from "./components/sections/SkillsList";
+import LanguageList from "./components/sections/LanguageList";
+import Education from "./components/sections/Education";
+import Contact from "./components/sections/Contact";
 import theme from "./utils/theme";
 
 const StyledSection = styled('section')(({ theme }) => ({
