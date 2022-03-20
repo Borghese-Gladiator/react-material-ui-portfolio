@@ -7,7 +7,6 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import React from 'react';
 
-
 const StyledCard = styled(Card)({
   borderRadius: "2px",
   backgroundColor: "#fff",
@@ -21,7 +20,6 @@ const StyledGridItem = styled(Grid)(({ theme }) => ({
   flexDirection: 'column',
 }));
 const StyledImg = styled('img')({
-
 })
 
 export default function SkillsCard({ skillObj }) {
