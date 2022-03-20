@@ -33,7 +33,7 @@ export default function SkillsCard({ skillObj }) {
         {skillGroupList.map(({ groupText, skillList }, idx) => {
           return (
             <StyledGridItem item xs={12} sm={6} md={4} lg={3} key={`${rootText}-${groupText}${idx}`}>
-              <Typography variant="subtitle1" >{groupText}</Typography>
+              <Typography variant="h6" >{groupText}</Typography>
               <UnstyledImageList>
                 {skillList.map(({ text, path }, idx) => (
                   <ImageListItem key={`${rootText}-${groupText}${idx}`}>
@@ -44,7 +44,7 @@ export default function SkillsCard({ skillObj }) {
                       loading="lazy"
                     />
                     <ImageListItemBar
-                      title={text}
+                      subtitle={text}
                       sx={{ textAlign: "center" }}
                     />
                   </ImageListItem>
