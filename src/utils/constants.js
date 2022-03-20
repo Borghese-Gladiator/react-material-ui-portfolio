@@ -224,9 +224,252 @@ export const projectList = [
 
 export const skillsList = [
   {
-    name: "GitHub",
-    path: "/img/avid_logo.png"
-  }
+    rootText: "Frontend",
+    skillGroupList: [
+      {
+        groupText: "Core",
+        skillList: [
+          {
+            text: "HTML",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "CSS",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "JavaScript",
+            path: "/img/avid_logo.png"
+          }
+        ]
+      },
+      {
+        groupText: "React.js",
+        skillList: [
+          {
+            text: "Next.js",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Redux",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Context",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Hooks",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+      {
+        groupText: "Cross Platform",
+        skillList: [
+          {
+            text: "React Native",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Flutter",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "PWA",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+      {
+        groupText: "Testing",
+        skillList: [
+          {
+            text: "Jest",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Cypress",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Lighthouse",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+    ]
+  },
+  {
+    rootText: "DevOps",
+    skillGroupList: [
+      {
+        groupText: "Scripting",
+        skillList: [
+          {
+            text: "Batch",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Powershell",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Bash",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+      {
+        groupText: "CI/CD",
+        skillList: [
+          {
+            text: "Jenkins",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "GitLab",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+      {
+        groupText: "Infrastructure",
+        skillList: [
+          {
+            text: "Kuberntes",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Terraform",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+    ]
+  },
+  
+  {
+    rootText: "Backend",
+    skillGroupList: [
+      {
+        groupText: "Database",
+        skillList: [
+          {
+            text: "MongoDB",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "SQLite",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Postgres",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+      {
+        groupText: "Build",
+        skillList: [
+          {
+            text: "pip",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Maven",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Gradle",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "npm",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+      {
+        groupText: "REST API",
+        skillList: [
+          {
+            text: "Flask",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Express",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Spring",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+      {
+        groupText: "Testing",
+        skillList: [
+          {
+            text: "Nose",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "unittest",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "jUnit",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Mocha",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+    ]
+  },
+  
+  {
+    rootText: "Cloud",
+    skillGroupList: [
+      {
+        groupText: "Platform",
+        skillList: [
+          {
+            text: "PCF",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "GCP",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "AWS",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Azure",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+      {
+        groupText: "Jamstack",
+        skillList: [
+          {
+            text: "Netlify",
+            path: "/img/avid_logo.png"
+          },
+          {
+            text: "Vercel",
+            path: "/img/avid_logo.png"
+          },
+        ]
+      },
+    ]
+  },
 ]
 
 export const languageList = [
