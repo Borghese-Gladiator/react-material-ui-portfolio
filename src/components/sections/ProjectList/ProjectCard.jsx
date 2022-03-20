@@ -37,7 +37,6 @@ export default function ProjectCard({ project, id }) {
   const { imgPath, title, about, tech, githubLink, demoLink } = project;
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
-  console.log(tech)
 
   return (
     <Grid item xs={12} sm={6} md={4}>
