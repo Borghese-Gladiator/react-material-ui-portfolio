@@ -10,6 +10,7 @@ import ProjectList from "./components/ProjectList";
 import SKillsList from "./components/SkillsList";
 import LanguageList from "./components/LanguageList";
 import Education from "./components/Education";
+import Contact from "./components/Contact";
 import theme from "./utils/theme";
 
 const StyledSection = styled('section')(({ theme }) => ({
@@ -42,6 +43,10 @@ function App() {
         <StyledSection id="education">
           <SectionHeader>EDUCATION</SectionHeader>
           <Education />
+        </StyledSection> 
+        <StyledSection id="contact">
+          <SectionHeader>CONTACT</SectionHeader>
+          <Contact />
         </StyledSection> 
       </ResponsiveDrawer>
     </ThemeProvider>
