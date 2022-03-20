@@ -1,3 +1,4 @@
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
 import Container from '@mui/material/Container';
@@ -20,7 +21,7 @@ export default function LanguageList() {
       {
         languageList.map(({ name, proficiencyText, value }, idx) => {
           return (
-            <>
+            <React.Fragment key={`language${idx}`}>
               <StyledHeader>{name}</StyledHeader>
               <StyledSecondarySpan>{proficiencyText}</StyledSecondarySpan>
               <ScaleBar
@@ -30,7 +31,7 @@ export default function LanguageList() {
                 min={0}
                 max={100}
               />
-            </>
+            </React.Fragment>
           )
         })
       }
