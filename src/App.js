@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 
 import SectionHeader from "./components/SectionHeader";
 import ResponsiveDrawer from "./components/ResponsiveDrawer";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Landing from "./components/Landing";
 import About from "./components/About";
 import ExperienceList from "./components/sections/ExperienceList";
@@ -17,37 +18,45 @@ const StyledSection = styled('section')(({ theme }) => ({
   marginBottom: theme.spacing(6)
 }));
 
+function Section(props) {
+  return (
+    <ErrorBoundary>
+      <StyledSection {...props} />
+    </ErrorBoundary>
+  )
+}
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <ResponsiveDrawer>
         <Landing />
-        <StyledSection id="about">
+        <Section id="about">
           <SectionHeader>ABOUT</SectionHeader>
           <About />
-        </StyledSection> 
-        <StyledSection id="experience">
+        </Section>
+        <Section id="experience">
           <SectionHeader>EXPERIENCE</SectionHeader>
           <ExperienceList />
-        </StyledSection> 
-        <StyledSection id="projects">
+        </Section>
+        <Section id="projects">
           <SectionHeader>PROJECTS</SectionHeader>
           <ProjectList />
-        </StyledSection> 
-        <StyledSection id="skills">
+        </Section>
+        <Section id="skills">
           <SectionHeader>SKILLS</SectionHeader>
           <SKillsList />
-          <div style={{padding:20}}/>
+          <div style={{ padding: 20 }} />
           <LanguageList />
-        </StyledSection> 
-        <StyledSection id="education">
+        </Section>
+        <Section id="education">
           <SectionHeader>EDUCATION</SectionHeader>
           <Education />
-        </StyledSection> 
-        <StyledSection id="contact">
+        </Section>
+        <Section id="contact">
           <SectionHeader>CONTACT</SectionHeader>
           <Contact />
-        </StyledSection> 
+        </Section>
       </ResponsiveDrawer>
     </ThemeProvider>
   );
