@@ -442,16 +442,12 @@ export const skillsList = [
             path: "/img/303-3033779_pivotal-cloud-foundry-logo-hd-png-download.png"
           },
           {
+            text: "Heroku",
+            path: "/img/heroku_logo.png"
+          },
+          {
             text: "GCP",
             path: "/img/google-cloud-platform-logo-freelogovectors.net_.png"
-          },
-          {
-            text: "AWS",
-            path: "/img/1200px-Amazon_Web_Services_Logo.svg.png"
-          },
-          {
-            text: "Azure",
-            path: "/img/Microsoft_Azure.svg.png"
           },
         ]
       },
