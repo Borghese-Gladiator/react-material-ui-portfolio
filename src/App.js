@@ -36,6 +36,7 @@ function App() {
         <StyledSection id="skills">
           <SectionHeader>SKILLS</SectionHeader>
           <SKillsList />
+          <div style={{padding:20}}/>
           <LanguageList />
         </StyledSection> 
         <StyledSection id="education">
