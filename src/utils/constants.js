@@ -231,15 +231,15 @@ export const skillsList = [
         skillList: [
           {
             text: "HTML",
-            path: "/img/avid_logo.png"
+            path: "/img/html_logo.png"
           },
           {
             text: "CSS",
-            path: "/img/avid_logo.png"
+            path: "/img/CSS3_logo_and_wordmark.svg.png"
           },
           {
             text: "JavaScript",
-            path: "/img/avid_logo.png"
+            path: "/img/1200px-Javascript-shield.svg.png"
           }
         ]
       },
@@ -248,19 +248,19 @@ export const skillsList = [
         skillList: [
           {
             text: "Next.js",
-            path: "/img/avid_logo.png"
+            path: "/img/800px-Nextjs-logo.svg.png"
           },
           {
             text: "Redux",
-            path: "/img/avid_logo.png"
+            path: "/img/redux_logo.png"
           },
           {
             text: "Context",
-            path: "/img/avid_logo.png"
+            path: "/img/1_izrTlpNwGggFhbpP0MgOAQ.png"
           },
           {
             text: "Hooks",
-            path: "/img/avid_logo.png"
+            path: "/img/react_hooks.png"
           },
         ]
       },
@@ -268,16 +268,16 @@ export const skillsList = [
         groupText: "Cross Platform",
         skillList: [
           {
+            text: "PWA",
+            path: "/img/pwa_logo.png"
+          },
+          {
             text: "React Native",
-            path: "/img/avid_logo.png"
+            path: "/img/react-native-workshop.jpg"
           },
           {
             text: "Flutter",
-            path: "/img/avid_logo.png"
-          },
-          {
-            text: "PWA",
-            path: "/img/avid_logo.png"
+            path: "/img/flutter5786.jpg"
           },
         ]
       },
@@ -286,15 +286,15 @@ export const skillsList = [
         skillList: [
           {
             text: "Jest",
-            path: "/img/avid_logo.png"
+            path: "/img/jest-logo-F9901EBBF7-seeklogo.com.png"
           },
           {
             text: "Cypress",
-            path: "/img/avid_logo.png"
+            path: "/img/cypress_logo.webp"
           },
           {
             text: "Lighthouse",
-            path: "/img/avid_logo.png"
+            path: "/img/Google-Chrome-Lighthouse-Logo.webp"
           },
         ]
       },
@@ -307,16 +307,16 @@ export const skillsList = [
         groupText: "Scripting",
         skillList: [
           {
-            text: "Batch",
-            path: "/img/avid_logo.png"
-          },
-          {
             text: "Powershell",
-            path: "/img/avid_logo.png"
+            path: "/img/powershell_logo.jpg"
           },
           {
             text: "Bash",
-            path: "/img/avid_logo.png"
+            path: "/img/bash_logo.png"
+          },
+          {
+            text: "Batch",
+            path: "/img/kisspng-batch-file-cmd-exe-batch-processing-dos-5af299150eba22.8627303815258483410603.jpg"
           },
         ]
       },
@@ -325,24 +325,24 @@ export const skillsList = [
         skillList: [
           {
             text: "Jenkins",
-            path: "/img/avid_logo.png"
+            path: "/img/1200px-Jenkins_logo.svg.png"
           },
           {
             text: "GitLab",
-            path: "/img/avid_logo.png"
+            path: "/img/gitlab_logo.jpg"
           },
         ]
       },
       {
-        groupText: "Infrastructure",
+        groupText: "Containerization",
         skillList: [
           {
-            text: "Kuberntes",
-            path: "/img/avid_logo.png"
+            text: "Docker",
+            path: "/img/docker_logo.png"
           },
           {
-            text: "Terraform",
-            path: "/img/avid_logo.png"
+            text: "Kuberntes",
+            path: "/img/kubernetes_logo.png"
           },
         ]
       },
@@ -357,15 +357,15 @@ export const skillsList = [
         skillList: [
           {
             text: "MongoDB",
-            path: "/img/avid_logo.png"
+            path: "/img/MongoDB-Emblem.jpg"
           },
           {
             text: "SQLite",
-            path: "/img/avid_logo.png"
+            path: "/img/Sqlite-square-icon.svg.png"
           },
           {
             text: "Postgres",
-            path: "/img/avid_logo.png"
+            path: "/img/Postgresql_elephant.svg.png"
           },
         ]
       },
@@ -374,19 +374,19 @@ export const skillsList = [
         skillList: [
           {
             text: "pip",
-            path: "/img/avid_logo.png"
+            path: "/img/pypi_400x400.webp"
           },
           {
             text: "Maven",
-            path: "/img/avid_logo.png"
+            path: "/img/maven-logo-black-on-white.webp"
           },
           {
             text: "Gradle",
-            path: "/img/avid_logo.png"
+            path: "/img/gradle_logo.png"
           },
           {
             text: "npm",
-            path: "/img/avid_logo.png"
+            path: "/img/540px-Npm-logo.svg.png"
           },
         ]
       },
@@ -395,15 +395,15 @@ export const skillsList = [
         skillList: [
           {
             text: "Flask",
-            path: "/img/avid_logo.png"
+            path: "/img/flask_logo.png"
           },
           {
             text: "Express",
-            path: "/img/avid_logo.png"
+            path: "/img/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png"
           },
           {
             text: "Spring",
-            path: "/img/avid_logo.png"
+            path: "/img/spring_logo.png"
           },
         ]
       },
@@ -411,20 +411,20 @@ export const skillsList = [
         groupText: "Testing",
         skillList: [
           {
-            text: "Nose",
-            path: "/img/avid_logo.png"
+            text: "pytest",
+            path: "/img/pytest_logo.webp"
           },
           {
             text: "unittest",
-            path: "/img/avid_logo.png"
+            path: "/img/unittest_logo.png"
           },
           {
             text: "jUnit",
-            path: "/img/avid_logo.png"
+            path: "/img/junit_logo.png"
           },
           {
             text: "Mocha",
-            path: "/img/avid_logo.png"
+            path: "/img/mocha-2-logo-png-transparent.png"
           },
         ]
       },
@@ -439,19 +439,19 @@ export const skillsList = [
         skillList: [
           {
             text: "PCF",
-            path: "/img/avid_logo.png"
+            path: "/img/303-3033779_pivotal-cloud-foundry-logo-hd-png-download.png"
           },
           {
             text: "GCP",
-            path: "/img/avid_logo.png"
+            path: "/img/google-cloud-platform-logo-freelogovectors.net_.png"
           },
           {
             text: "AWS",
-            path: "/img/avid_logo.png"
+            path: "/img/1200px-Amazon_Web_Services_Logo.svg.png"
           },
           {
             text: "Azure",
-            path: "/img/avid_logo.png"
+            path: "/img/Microsoft_Azure.svg.png"
           },
         ]
       },
@@ -460,11 +460,11 @@ export const skillsList = [
         skillList: [
           {
             text: "Netlify",
-            path: "/img/avid_logo.png"
+            path: "/img/netlify_logomark.png"
           },
           {
             text: "Vercel",
-            path: "/img/avid_logo.png"
+            path: "/img/vercel_logo.webp"
           },
         ]
       },
