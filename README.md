@@ -12,7 +12,6 @@ Created a cleaner portfolio to display my skills (took inspiration from Andrew B
 - Responsive content (navbar and cards)
 
 ## Development Features
-- PropTypes checking on components
 - Custom Theming with constants in theme.js
 - Styled components written with @emotion (built-in styling from Material UI)
 
@@ -22,6 +21,9 @@ Created a cleaner portfolio to display my skills (took inspiration from Andrew B
 - loaded custom theme from theme.js in utils
 - created custom theming using [https://material.io/inline-tools/color/](https://material.io/inline-tools/color/)
 - created background CSS using site and Hex to RGB Color Converter [https://www.magicpattern.design/tools/css-backgrounds](https://www.magicpattern.design/tools/css-backgrounds)
+- iteratively implemented each component and wrote constants.js values
+- deployed to GitHub Pages using [https://github.com/gitname/react-gh-pages](https://github.com/gitname/react-gh-pages)
+  - ```npm install gh-pages --save-dev```
 
 #### Bug Fixes
 - CSS opacity only applies on images. When applying opacity to background image, use an overlay with backgroundColor rgba.
