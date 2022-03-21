@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import {
   AppBar, Box, CssBaseline, Divider, Drawer, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography
 } from '@mui/material';
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import MenuIcon from '@mui/icons-material/Menu';
 import { drawerWidth, sidebarLinkList } from "../utils/constants";
 
@@ -18,6 +19,53 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 const StyledBox = styled(Box)({
   background: 'url(/img/bg.png) repeat'
 });
+
+const scrollToTop = () => {
+  scroll.scrollToTop();
+};
+
+function ListItemExternalLink({ sidebarLink }) {
+  const { text, link, icon } = sidebarLink;
+  const Icon = icon;
+  return (
+    <Link key={text} href={link} target="_blank" color="#333" underline="none">
+    <ListItem button>
+      <ListItemIcon>
+        <Icon sx={{ fontSize: 33 }} />
+      </ListItemIcon>
+      <ListItemText
+        disableTypography
+        primary={<Typography variant="body2" color="#333">{text}</Typography>}
+      />
+    </ListItem>
+  </Link>
+  )
+}
+function ListItemScrollLink({ sidebarLink }) {
+  const { text, link, icon } = sidebarLink;
+  const Icon = icon;
+  return (
+    <ScrollLink
+      activeClass="active"
+      to={link}
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={500}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <Icon sx={{ fontSize: 33 }} />
+        </ListItemIcon>
+        <ListItemText
+          disableTypography
+          primary={<Typography variant="body2" color="#333">{text}</Typography>}
+        />
+      </ListItem>
+    </ScrollLink>
+  )
+  
+}
 
 function ResponsiveDrawer(props) {
   const { window, children } = props;
@@ -35,6 +83,7 @@ function ResponsiveDrawer(props) {
         mr={3}
         mb={3}
         sx={{ display: displayObjDesktop }}
+        onClick={scrollToTop}
       >
         <Typography color="primary" variant="h4" component="div">Timothy<br />Shee</Typography>
         <Typography color="secondary" variant="body2" gutterBottom component="div">Full Stack Developer</Typography>
@@ -43,22 +92,10 @@ function ResponsiveDrawer(props) {
       <List>
         {
           sidebarLinkList.map((sidebarLink, idx) => {
-            const { text, link, icon } = sidebarLink;
-            const Icon = icon;
-            const _target = text === "Resume" ? "_blank" : "_self";
-            return (
-              <Link key={text} href={link} target={_target} color="#333" underline="none">
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon sx={{ fontSize: 33 }} />
-                  </ListItemIcon>
-                  <ListItemText
-                    disableTypography
-                    primary={<Typography variant="body2" color="#333">{text}</Typography>}
-                  />
-                </ListItem>
-              </Link>
-            )
+            if ("isExternalLink" in sidebarLink) {
+              return <ListItemExternalLink sidebarLink={sidebarLink} />
+            }
+            return <ListItemScrollLink sidebarLink={sidebarLink} />
           })
         }
       </List>
