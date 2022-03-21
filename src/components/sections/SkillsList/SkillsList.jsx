@@ -8,8 +8,8 @@ const StyledBox =  styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   alignItems: 'center',
   gap: theme.spacing(5),
-  marginLeft: theme.spacing(5),
-  marginRight: theme.spacing(5)
+  marginLeft: theme.spacing(8),
+  marginRight: theme.spacing(8)
 }));
 
 export default function SkillsList() {
