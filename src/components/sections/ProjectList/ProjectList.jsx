@@ -1,5 +1,4 @@
 import { Grid } from "@mui/material";
-import { styled } from '@mui/material/styles';
 import ProjectCard from "./ProjectCard";
 import { projectList } from "../../../utils/constants";
 
