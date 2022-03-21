@@ -25,6 +25,7 @@ Created a cleaner portfolio to display my skills (took inspiration from Andrew B
 - deployed to GitHub Pages using [https://github.com/gitname/react-gh-pages](https://github.com/gitname/react-gh-pages)
   - ```npm install gh-pages --save-dev```
   - gave up since I deployed to the User page already with a different site
+  - ```npm uninstall gh-pages```
 - added meta to index.html
 - deployed to Netlify [https://timshee.netlify.app/](https://timshee.netlify.app/)
 
