@@ -19,8 +19,6 @@ const StyledGridItem = styled(Grid)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
 }));
-const StyledImg = styled('img')({
-})
 
 export default function SkillsCard({ skillObj }) {
   const { rootText, skillGroupList } = skillObj;

@@ -1,9 +1,8 @@
 import { useState, Fragment } from 'react';
 import { styled } from '@mui/material/styles';
 import {
-  Card, CardContent, CardMedia, Typography, CardActionArea,
-  Box, IconButton, Slide, Link, Button, Avatar, Grid,
-  CardHeader
+  Card, CardContent, Typography, CardActionArea,
+  Box, IconButton, Slide, Link, Avatar, Grid,
 } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import GitHubIcon from '@mui/icons-material/GitHub';
