@@ -1,5 +1,5 @@
 # 2022 Portfolio
-Created a cleaner portfolio to display my skills (took inspiration from Andrew Borstein's portfolio as seen in Medium article)
+Created a cleaner portfolio to display my skills (took inspiration from Andrew Borstein's portfolio as seen in Medium article) [https://timshee.netlify.app/](https://timshee.netlify.app/)
 
 ## Technologies
 - React 17+ (create-react-app)
@@ -24,6 +24,9 @@ Created a cleaner portfolio to display my skills (took inspiration from Andrew B
 - iteratively implemented each component and wrote constants.js values
 - deployed to GitHub Pages using [https://github.com/gitname/react-gh-pages](https://github.com/gitname/react-gh-pages)
   - ```npm install gh-pages --save-dev```
+  - gave up since I deployed to the User page already with a different site
+- added meta to index.html
+- deployed to Netlify [https://timshee.netlify.app/](https://timshee.netlify.app/)
 
 #### Bug Fixes
 - CSS opacity only applies on images. When applying opacity to background image, use an overlay with backgroundColor rgba.
