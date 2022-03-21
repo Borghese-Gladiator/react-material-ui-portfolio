@@ -1,22 +1,10 @@
-import * as React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import { Link } from '@mui/material';
-
 import { styled } from '@mui/material/styles';
-
+import {
+  AppBar, Box, CssBaseline, Divider, Drawer, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import { drawerWidth, sidebarLinkList } from "../utils/constants";
 
 const displayObjMobile = { xs: 'block', sm: 'block', md: 'none' }
@@ -33,7 +21,7 @@ const StyledBox = styled(Box)({
 
 function ResponsiveDrawer(props) {
   const { window, children } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
