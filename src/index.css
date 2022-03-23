@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Precious';
+  src: url('./assets/fonts/precious/Precious.eot');
+  src: url('./assets/fonts/precious/Precious.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/precious/Precious.woff2') format('woff2'),
+      url('./assets/fonts/precious/Precious.woff') format('woff'),
+      url('./assets/fonts/precious/Precious.ttf')  format('truetype'), /* Safari, Android, iOS */
+      url('./assets/fonts/precious/Precious.svg#Precious') format('svg'); /* Legacy iOS */;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/MyFont.woff) format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg'
+}
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+*/
