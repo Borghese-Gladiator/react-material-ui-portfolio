@@ -80,21 +80,21 @@ export default function ProjectCard({ project, id }) {
               <StyledImg
                 src={imgPath}
               />
-            </CardActionArea>
-            <CardContent pb={1}>
-              <Box display="flex">
-                <Typography gutterBottom variant="h5" component="div" color="primary" onClick={() => setOpen(true)}>
-                  {title}
+              <CardContent pb={1}>
+                <Box display="flex">
+                  <Typography gutterBottom variant="h5" component="div" color="primary" onClick={() => setOpen(true)}>
+                    {title}
+                  </Typography>
+                  <Box sx={{ flexGrow: 1 }} />
+                  <IconButton color="primary" aria-label="upload picture" component="span" onClick={() => setOpen(true)}>
+                    <MoreVertIcon />
+                  </IconButton>
+                </Box>
+                <Typography variant="body1">
+                  {about}
                 </Typography>
-                <Box sx={{ flexGrow: 1 }} />
-                <IconButton color="primary" aria-label="upload picture" component="span" onClick={() => setOpen(true)}>
-                  <MoreVertIcon />
-                </IconButton>
-              </Box>
-              <Typography variant="body1">
-                {about}
-              </Typography>
-            </CardContent>
+              </CardContent>
+            </CardActionArea>
           </>
         }
       </StyledCard>
