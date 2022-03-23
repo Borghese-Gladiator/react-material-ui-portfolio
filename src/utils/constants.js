@@ -221,6 +221,29 @@ export const projectList = [
     githubLink: "https://github.com/Borghese-Gladiator/pushercoins",
     demoLink: "https://tutorial-pushercoins.herokuapp.com/"
   },
+  {
+    imgPath: "/img/community-hero.ba9f6ee2.png",
+    title: "HackUMass 2019",
+    about: "Android app for Community Event Collaboration",
+    tech: [
+      <li>Users create and join events in their area and are given a "Social Welfare Score"</li>,
+      <li>Wrote app in Android Studio and demonstrated to judges with AVD</li>,
+      <li>Transposit API Winner by using API for sentiment analysis to filter negative event requests</li>
+    ],
+    demoLink: "https://dashboard.hackumass.com/projects/63"
+  },
+  {
+    imgPath: "/img/leap-motion.d2adc0d1.png",
+    title: "HackUMass 2018",
+    about: "Motion activated music controller using Leap Motion",
+    tech: [
+      <li>Achieved top 3 finalist of 121 teams and 1000 hackers.</li>,
+      <li>Python + Leap Motion SDK to detect gestures using Cartesian coordinates of finger digits</li>,
+      <li>Forwarded current gesture to HTML/CSS/JS frontend using SocketIO</li>,
+    ],
+    githubLink: "https://github.com/crystalrhee/hackumassvi",
+    demoLink: "https://dashboard.hackumass.com/projects/45"
+  }
 ]
 
 export const skillsList = [
