@@ -53,13 +53,13 @@ function ListItemScrollLink({ sidebarLink, visibleSection }) {
       offset={-70}
       duration={500}
     >
-      <ListItem button sx={{ marginLeft: visibleSection === link ? "10px" : "" }}>
+      <ListItem button sx={{ marginLeft: visibleSection === link ? "10px" : "", backgroundColor: visibleSection === link ? "#32a852" : "" }}>
         <ListItemIcon>
           <Icon sx={{ fontSize: 33 }} />
         </ListItemIcon>
         <ListItemText
           disableTypography
-          primary={<Typography variant="body2" color="#333" sx={{ fontWeight: visibleSection === link ? "bold" : "" }}>{text}</Typography>}
+          primary={<Typography variant="body2" sx={{ color: visibleSection === link ? "#fff" : "#333", fontWeight: visibleSection === link ? "bold" : "" }}>{text}</Typography>}
         />
       </ListItem>
     </ScrollLink>
