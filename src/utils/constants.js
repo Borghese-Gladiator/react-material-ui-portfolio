@@ -233,6 +233,17 @@ export const projectList = [
     demoLink: "https://dashboard.hackumass.com/projects/63"
   },
   {
+    imgPath: "/img/Audio-Waveforms-Featued-Image.74871842.jpg",
+    title: "Online Hololive Soundboard",
+    about: "Used WebRTC API and VB Audio to redirect Hololive character MP3 files to mic",
+    tech: [
+      <li>Loads all character MP3 filepaths from JSON and display as <pre><audio /></pre> elements</li>,
+      <li>WebRTC JS script used for audio piping</li>,
+      <li>Used Framer Motion to animate loading of Hololive character profile images</li>,
+    ],
+    githubLink: "https://github.com/Borghese-Gladiator/hololive-audio"
+  }
+  {
     imgPath: "/img/leap-motion.d2adc0d1.png",
     title: "HackUMass 2018",
     about: "Motion activated music controller using Leap Motion",
