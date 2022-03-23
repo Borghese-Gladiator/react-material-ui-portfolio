@@ -24,7 +24,7 @@ const scrollToTop = () => {
   scroll.scrollToTop();
 };
 
-function ListItemExternalLink({ sidebarLink }) {
+function ListItemExternalLink({ sidebarLink, visibleSection }) {
   const { text, link, icon } = sidebarLink;
   const Icon = icon;
   return (
@@ -41,7 +41,7 @@ function ListItemExternalLink({ sidebarLink }) {
   </Link>
   )
 }
-function ListItemScrollLink({ sidebarLink }) {
+function ListItemScrollLink({ sidebarLink, visibleSection }) {
   const { text, link, icon } = sidebarLink;
   const Icon = icon;
   return (
@@ -53,13 +53,13 @@ function ListItemScrollLink({ sidebarLink }) {
       offset={-70}
       duration={500}
     >
-      <ListItem button>
+      <ListItem button sx={{ marginLeft: visibleSection === link ? "10px" : "" }}>
         <ListItemIcon>
           <Icon sx={{ fontSize: 33 }} />
         </ListItemIcon>
         <ListItemText
           disableTypography
-          primary={<Typography variant="body2" color="#333">{text}</Typography>}
+          primary={<Typography variant="body2" color="#333" sx={{ fontWeight: visibleSection === link ? "bold" : "" }}>{text}</Typography>}
         />
       </ListItem>
     </ScrollLink>
@@ -68,7 +68,7 @@ function ListItemScrollLink({ sidebarLink }) {
 }
 
 function ResponsiveDrawer(props) {
-  const { window, children } = props;
+  const { visibleSection, window, children } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -93,9 +93,9 @@ function ResponsiveDrawer(props) {
         {
           sidebarLinkList.map((sidebarLink, idx) => {
             if ("isExternalLink" in sidebarLink) {
-              return <ListItemExternalLink key={`sidebar-link${idx}`} sidebarLink={sidebarLink} />
+              return <ListItemExternalLink key={`sidebar-link${idx}`} sidebarLink={sidebarLink} visibleSection={visibleSection} />
             }
-            return <ListItemScrollLink key={`sidebar-link${idx}`} sidebarLink={sidebarLink} />
+            return <ListItemScrollLink key={`sidebar-link${idx}`} sidebarLink={sidebarLink} visibleSection={visibleSection} />
           })
         }
       </List>
