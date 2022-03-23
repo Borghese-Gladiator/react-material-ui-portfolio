@@ -242,7 +242,7 @@ export const projectList = [
       <li>Used Framer Motion to animate loading of Hololive character profile images</li>,
     ],
     githubLink: "https://github.com/Borghese-Gladiator/hololive-audio"
-  }
+  },
   {
     imgPath: "/img/leap-motion.d2adc0d1.png",
     title: "HackUMass 2018",
