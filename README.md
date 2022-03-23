@@ -28,6 +28,10 @@ Created a cleaner portfolio to display my skills (took inspiration from Andrew B
   - ```npm uninstall gh-pages```
 - added meta to index.html
 - deployed to Netlify [https://timshee.netlify.app/](https://timshee.netlify.app/)
+- added smooth scroll using react-scroll
+- added current section highlight
+  - React refs required to be put on non-functional components (eg: div)
+  - [https://stackoverflow.com/questions/55995760/how-to-add-refs-dynamically-with-react-hooks](https://stackoverflow.com/questions/55995760/how-to-add-refs-dynamically-with-react-hooks)
 
 #### Bug Fixes
 - CSS opacity only applies on images. When applying opacity to background image, use an overlay with backgroundColor rgba.
