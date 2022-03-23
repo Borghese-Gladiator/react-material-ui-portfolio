@@ -237,7 +237,7 @@ export const projectList = [
     title: "Online Hololive Soundboard",
     about: "Used WebRTC API and VB Audio to redirect Hololive character MP3 files to mic",
     tech: [
-      <li>Loads all character MP3 filepaths from JSON and display as <pre><audio /></pre> elements</li>,
+      <li>Loads all character MP3 filepaths from JSON and display as &lt;audio&gt; elements</li>,
       <li>WebRTC JS script used for audio piping</li>,
       <li>Used Framer Motion to animate loading of Hololive character profile images</li>,
     ],
