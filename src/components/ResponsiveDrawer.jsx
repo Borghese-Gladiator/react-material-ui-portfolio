@@ -93,9 +93,9 @@ function ResponsiveDrawer(props) {
         {
           sidebarLinkList.map((sidebarLink, idx) => {
             if ("isExternalLink" in sidebarLink) {
-              return <ListItemExternalLink sidebarLink={sidebarLink} />
+              return <ListItemExternalLink key={`sidebar-link${idx}`} sidebarLink={sidebarLink} />
             }
-            return <ListItemScrollLink sidebarLink={sidebarLink} />
+            return <ListItemScrollLink key={`sidebar-link${idx}`} sidebarLink={sidebarLink} />
           })
         }
       </List>
@@ -136,7 +136,6 @@ function ResponsiveDrawer(props) {
       <Box
         component="nav"
         sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
-        aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
