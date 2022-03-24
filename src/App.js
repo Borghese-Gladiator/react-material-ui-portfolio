@@ -50,16 +50,15 @@ function App() {
   const fifthRef = useRef(null);
   const sixthRef = useRef(null);
 
-  const sectionRefs = [
-    { section: "about", ref: firstRef },
-    { section: "experience", ref: secondRef },
-    { section: "projects", ref: thirdRef },
-    { section: "skills", ref: fourthRef },
-    { section: "education", ref: fifthRef },
-    { section: "contact", ref: sixthRef },
-  ];
-
   useEffect(() => {
+    const sectionRefs = [
+      { section: "about", ref: firstRef },
+      { section: "experience", ref: secondRef },
+      { section: "projects", ref: thirdRef },
+      { section: "skills", ref: fourthRef },
+      { section: "education", ref: fifthRef },
+      { section: "contact", ref: sixthRef },
+    ];
     const handleScroll = () => {
       const { height: headerHeight } = getDimensions(headerRef.current);
       const scrollPosition = window.scrollY + headerHeight;
@@ -70,6 +69,7 @@ function App() {
           const { offsetBottom, offsetTop } = getDimensions(ele);
           return scrollPosition > offsetTop && scrollPosition < offsetBottom;
         }
+        return false
       });
 
       if (selected && selected.section !== visibleSection) {
