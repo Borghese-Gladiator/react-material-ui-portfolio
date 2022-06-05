@@ -1,5 +1,6 @@
 import { Container, Typography } from "@mui/material";
 import { styled } from '@mui/material/styles';
+import { aboutList } from '../../utils/constants';
 
 const StyledBlockquote = styled('blockquote')({
   borderLeft: "5px solid #795548",
@@ -15,12 +16,13 @@ export default function About() {
           Driven full stack developer with an interest in blockchain and data science
         </Typography>
       </StyledBlockquote>
-      <Typography variant="h6" gutterBottom>
-        I am currently a software engineer at Dell EMC in the analytics team where I handle backend development and integration testing on CloudIQ, our cloud platform.
-      </Typography>
-      <Typography variant="h6" gutterBottom>
-        As a web developer, I direct my attention to detail and coding standards. My greatest passion is building web utilities to automate facets of my life.
-      </Typography>
+      {
+        aboutList.map((val) =>
+          <Typography variant="h6" gutterBottom>
+            {val}
+          </Typography>
+        )
+      }
     </Container>
   )
 }

@@ -47,23 +47,12 @@ export const sidebarLinkList = [
   }
 ]
 
+export const aboutList = [
+  "I am currently a software engineer at Dell EMC in the analytics team where I handle backend development and integration testing on CloudIQ, our cloud platform.",
+  "As a recent graduate, I am looking to make my mark and develop software that has an impact. During my downtime, I develop web utilities to automate facets of my life. That's why I'm excited to apply my skills at a high growth company."
+]
+
 export const experienceList = [
-  {
-    logoPath: "/img/ajY0zUdY_400x400.jpg",
-    company: "Creaticles",
-    product: "Trial project for Blockchain start up - NFT Crowd sourcing platform",
-    position: "Contractor",
-    summary: "Wrote full stack voting platform DApp",
-    bullets: [
-      "Developed and Deployed Solidity smart contract to Ropsten Ethereum Test Network",
-      "Developed Next.js app with serverless functions for users to vote, see past transactions, and see the leaderboard",
-      "Deployed to Vercel using environment variables for contract address and MONGODB_URI",
-      "Validated content using MetaMask and test ether from Ethereum Faucet",
-      "Saved voter information to MongoDB Atlas database"
-    ],
-    date: "Jan 2022",
-    location: "Remote"
-  },
   {
     logoPath: "/img/dell-technologies-vertical_logo.png",
     company: "Dell EMC",
@@ -71,8 +60,6 @@ export const experienceList = [
     position: "Software Engineer I",
     summary: "Responsible for testing automation and data engineering in Analytics Core team (Cloud 2)",
     bullets: [
-      "Maintained integration tests in E2E framework using Java, Maven, Selenium",
-      "Designed Selenium test automation system to detect environmental failures then re-start and re-configure all required data processors to resolve microservice dataprep failures",
       "Developed new E2E API Tests for APEX (as a Subscription Offering)",
       {
         title: "Migrated Time Series Similarity from R to Python for license compliance",
@@ -83,16 +70,37 @@ export const experienceList = [
           "Displayed aggregated data with pandas, Elasticsearch, and Kibana"
         ]
       },
-      "Validated changes for Virtual Machine Performance Impacts feature by writing unit test, contract test, and running integration tests",
+      "Converted two micro frontend plugins from AngularJS to Angular 12",
+      "Designed Selenium test automation system to detect environmental failures then re-start and re-configure all required data processors to resolve microservice dataprep failures",
+      "Validated changes for VM Performance Impacts by writing unit test, contract test, and running integration tests",
+      "Maintained integration tests in E2E framework using Java, Maven, Selenium",
+      "Collaborated with scrum team using Jira, Slack, Office 365, and Agile methodology"
     ],
     date: "May 2021 - Present",
     location: "Hopkinton, MA"
   },
   {
+    logoPath: "/img/ajY0zUdY_400x400.jpg",
+    company: "Mad River",
+    product: "Creaticles - NFT crowdsourcing platform",
+    position: "Blockchain Developer Contractor",
+    summary: "Developed full stack DApp and deployed to Vercel for public access",
+    bullets: [
+      "Deployed Solidity smart contracts to Ropsten Ethereum Test Network",
+	    "Developed/Tested Solidity smart contracts locally with Hardhat.js",
+      "Developed frontend using Next.js and Material UI 5 with @emotion CSS in JS",
+      "Developed backend using Next.js serverless functions and MongoDB Atlas",
+      "Configured Next.js to load ENV variables from Vercel for ABI address and MongoDB URI",
+      "Tested E2E manually using Metamask and Ethereum Faucet test ether"
+      ],
+    date: "Jan - Feb 2022",
+    location: "Remote"
+  },
+  {
     logoPath: "/img/RSA_Security_Logo.bd948c30.png",
     company: "RSA Security",
     product: "Netwitness - SIEM software",
-    position: "Quality Engineering Intern",
+    position: "Software Engineer Intern",
     summary: "I setup CD for threat content with Jenkins pipeline list to auto test & auto deploy to production new and modified content.",
     bullets: [
       "Established CI/CD Jenkins Scripted Pipeline that automated testing and deployment of threat content (specifically lua parsers and esa rules).",
@@ -108,7 +116,7 @@ export const experienceList = [
     logoPath: "/img/RSA_Security_Logo.bd948c30.png",
     company: "RSA Security",
     product: "Netwitness - SIEM software",
-    position: "Quality Engineering Intern",
+    position: "Software Engineer Intern",
     summary: "I wrote new Python regression tests for 31 manually tested ESA rules and added a pipeline for my test to the daily build.",
     bullets: [
       "Wrote new Python regression tests for 31 manually tested ESA Rules which use ContextHub data sources, a new feature of the 11.2 release. Created Jenkins pipelines for my regression tests in the daily build on the Bangalore server",
@@ -191,7 +199,7 @@ export const projectList = [
     title: "Novel Auto Scroller",
     about: "Chrome extension to automatically scroll down web page on novel site",
     tech: [
-      <li>Used manifest.js to ensure extension only runs on reading novels website</li>,
+      <li>Used {b("manifest.json V2")} to ensure extension only runs on reading novels website</li>,
       <li>Wrote {b("Vanilla JS")} to remove ads and scroll every 10 seconds</li>,
       <li>Used Chrome Developer Mode to add extension (store requires money for Google Developer License)</li>,
     ],
