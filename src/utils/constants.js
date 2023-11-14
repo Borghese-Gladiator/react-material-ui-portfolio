@@ -43,13 +43,14 @@ export const sidebarLinkList = [
     isExternalLink: true,
     icon: (props) => <ArticleIcon {...props} />,
     text: "Resume",
-    link: "/doc/Timothy_Shee_Resume_2022.pdf"
+    link: "/doc/Timothy_Shee_Resume_2023.pdf"
   }
 ]
 
 export const aboutList = [
-  "I am currently a software engineer at Dell EMC in the analytics team where I handle backend development and integration testing on CloudIQ, our cloud platform.",
-  "As a recent graduate, I am looking to make my mark and develop software that has an impact. During my downtime, I develop web utilities to automate facets of my life. That's why I'm excited to apply my skills at a high growth company."
+  "I am a developer with 3 years of experience familiar with Java, Python, and JavaScript and specialize in cloud platforms (especially building API microservices in REST/GraphQL).",
+  "At Dell EMC, I worked on Java Spring and Python Flask microservices in the analytics team on the cloud platform, CloudIQ. Later at a startup called Rewst, I wrote both frontend and backend features using React (Next.js) and Faust (Python). These experiences equipped me with a strong technical foundation and the adaptability to thrive in a rapidly evolving work environment.",
+  "I am eager for a new challenge and would love to hear from you."
 ]
 
 export const experienceList = [
