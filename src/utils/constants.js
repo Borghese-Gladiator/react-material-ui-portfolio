@@ -55,6 +55,31 @@ export const aboutList = [
 
 export const experienceList = [
   {
+    logoPath: "/img/rewst_logo.jpg",
+    company: "Rewst",
+    product: "Rewst - cloud platform for B2B automation via workflows",
+    position: "Software Engineer II",
+    summary: "Responsible for full stack development of features in Python and JavaScript",
+    bullets: [
+      {
+        title: "Developed features and fixed bugs in monorepo of Next.js frontend, Apollo GraphQL server, and Faust Python engine",
+        bullets: [
+          "SQL Integration for clients to load data into Rewst via queries to their own database (Postgres, MSSQL, MySQL)",
+          "Liongard Integration to access client Liongard resources via REST by managing API keys and paginating resources",
+          "Codepen-like UI for Jinja Live Editor to test Jinja code on customer context data while viewing real-time results",
+          "Cron Job to prune results for data Compliance via SQL query based on customizable multi-tenant org settings",
+          "Pendo dashboard to track customer product usage by sending Pendo track events from an Apollo Datasource",
+        ]
+      },
+      "Deployed features to AWS EKS Kubernetes and monitored using K9s, OpenSearch, and Grafana after validating in local Minikube environment bootstrapped with Helm Charts",
+      "Developed Grafana dashboard to monitor real-time workflow usage and exported CSV to create report for investors",
+      "Improved coding standards using Ruff Linting for Python and ESLint\slash{}Prettier for JS via Pre Commit Hooks \& CircleCI",
+      "Collaborated with team using GitHub, Shortcut (like Jira), Slack, GitBooks, and Gather",
+    ],
+    date: "Jun 2022 - Nov 2023",
+    location: "Remote"
+  },
+  {
     logoPath: "/img/dell-technologies-vertical_logo.png",
     company: "Dell EMC",
     product: "CloudIQ - cloud platform for EMC storage products",
@@ -88,12 +113,12 @@ export const experienceList = [
     summary: "Developed full stack DApp and deployed to Vercel for public access",
     bullets: [
       "Deployed Solidity smart contracts to Ropsten Ethereum Test Network",
-	    "Developed/Tested Solidity smart contracts locally with Hardhat.js",
+      "Developed/Tested Solidity smart contracts locally with Hardhat.js",
       "Developed frontend using Next.js and Material UI 5 with @emotion CSS in JS",
       "Developed backend using Next.js serverless functions and MongoDB Atlas",
       "Configured Next.js to load ENV variables from Vercel for ABI address and MongoDB URI",
       "Tested E2E manually using Metamask and Ethereum Faucet test ether"
-      ],
+    ],
     date: "Jan - Feb 2022",
     location: "Remote"
   },
@@ -392,7 +417,7 @@ export const skillsList = [
       },
     ]
   },
-  
+
   {
     rootText: "Backend",
     skillGroupList: [
@@ -474,7 +499,7 @@ export const skillsList = [
       },
     ]
   },
-  
+
   {
     rootText: "Cloud",
     skillGroupList: [
