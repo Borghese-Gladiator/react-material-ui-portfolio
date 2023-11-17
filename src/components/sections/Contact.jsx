@@ -1,19 +1,26 @@
 import { styled } from '@mui/material/styles';
-import { Box, Link, Avatar, Typography } from "@mui/material";
+import { useTheme, Box, Card, Divider, Grid, Link, Avatar, Typography } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import StarIcon from '@mui/icons-material/Star';
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: 'flex',
-  flexDirection: 'column',
+  justifyContent: 'center',
   gap: theme.spacing(3),
   marginLeft: theme.spacing(8),
-  marginRight: theme.spacing(8)
+  marginRight: theme.spacing(8),
 }));
-const Row = styled(Box)(({ theme }) => ({
+const StyledCard = styled(Card)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
+  padding: theme.spacing(3)
 }));
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
@@ -21,37 +28,53 @@ const StyledAvatar = styled(Avatar)(({ theme }) => ({
   height: 56
 }));
 
-const mailLink = `href="mailto:tim.shee0791@gmail.com"`;
+const mailLink = `mailto:tim.shee0791@gmail.com`;
 const githubLink = "https://github.com/Borghese-Gladiator";
 const linkedinLink = "https://www.linkedin.com/in/timothy-shee";
 
 export default function Contact() {
+  const theme = useTheme();
   return (
     <StyledBox>
-      <Link href={mailLink}>
-        <Row>
-          <StyledAvatar>
-            <EmailIcon />
-          </StyledAvatar>
-          <Typography ml={2} variant="subtitle1" color="primary">tim.shee0791@gmail.com</Typography>
-        </Row>
-      </Link>
-      <Link href={githubLink}>
-        <Row>
-          <StyledAvatar>
-            <GitHubIcon />
-          </StyledAvatar>
-          <Typography ml={2} variant="subtitle1" color="primary">github.com/borghese-gladiator</Typography>
-        </Row>
-      </Link>
-      <Link href={linkedinLink}>
-        <Row>
-          <StyledAvatar>
-            <LinkedInIcon />
-          </StyledAvatar>
-          <Typography ml={2} variant="subtitle1" color="primary">github.com/borghese-gladiator</Typography>
-        </Row>
-      </Link>
+      <List
+        sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+        aria-label="contacts"
+      >
+        <Link href={mailLink}>
+          <ListItem>
+            <StyledAvatar backgroundColor="red">
+              <EmailIcon />
+            </StyledAvatar>
+            <Typography ml={2} variant="subtitle1" color="primary">tim.shee0791@gmail.com</Typography>
+          </ListItem>
+        </Link>
+        <Divider />
+        <Link href={githubLink}>
+          <ListItem>
+            <Avatar sx={{
+              width: 56,
+              height: 56,
+              backgroundColor: 'black',
+            }}>
+              <GitHubIcon />
+            </Avatar>
+            <Typography ml={2} variant="subtitle1" color="primary">github.com/borghese-gladiator</Typography>
+          </ListItem>
+        </Link>
+        <Divider />
+        <Link href={linkedinLink}>
+          <ListItem>
+            <Avatar sx={{
+              width: 56,
+              height: 56,
+              backgroundColor: theme.palette.primary.main,
+            }}>
+              <LinkedInIcon />
+            </Avatar>
+            <Typography ml={2} variant="subtitle1" color="primary">github.com/borghese-gladiator</Typography>
+          </ListItem>
+        </Link>
+      </List>
     </StyledBox>
   )
 }

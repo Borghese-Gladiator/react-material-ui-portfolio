@@ -14,7 +14,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
 export default function Education() {
   return (
     <StyledBox>
-      <Grid container>
+      <Grid container justifyContent={"center"}>
         <Grid item xs={12} md={6}>
           <StyledCard>
             <Typography variant="h5" color="primary">UMASS AMHERST</Typography>
