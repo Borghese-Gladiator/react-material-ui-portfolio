@@ -38,7 +38,7 @@ export default function ExperienceCard({ experience, id }) {
   const { logoPath, company, position, summary, bullets, date, location } = experience;
 
   return (
-    <StyledCard>
+    <StyledCard sx={{ width: "100%" }}>
       <Box sx={{ display: 'flex', alignItems: 'center' }} m={3}>
         <StyledLogoImg src={logoPath} alt={`${company} logo`} />
         <Typography variant="h5" color="primary" ml={4}>{company.toUpperCase()}</Typography>
