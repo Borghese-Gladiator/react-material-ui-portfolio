@@ -1,14 +1,10 @@
 import { styled } from '@mui/material/styles';
-import { useTheme, Box, Card, Divider, Grid, Link, Avatar, Typography } from "@mui/material";
+import { useTheme, Box, Divider, Link, Avatar, Typography } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import StarIcon from '@mui/icons-material/Star';
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -16,11 +12,6 @@ const StyledBox = styled(Box)(({ theme }) => ({
   gap: theme.spacing(3),
   marginLeft: theme.spacing(8),
   marginRight: theme.spacing(8),
-}));
-const StyledCard = styled(Card)(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(3)
 }));
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,

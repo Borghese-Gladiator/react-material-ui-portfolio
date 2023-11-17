@@ -73,7 +73,7 @@ export const experienceList = [
       },
       "Deployed features to AWS EKS Kubernetes and monitored using K9s, OpenSearch, and Grafana after validating in local Minikube environment bootstrapped with Helm Charts",
       "Developed Grafana dashboard to monitor real-time workflow usage and exported CSV to create report for investors",
-      "Improved coding standards using Ruff Linting for Python and ESLint\slash{}Prettier for JS via Pre Commit Hooks \& CircleCI",
+      "Improved coding standards using Ruff Linting for Python and ESLint\\Prettier for JS via Pre Commit Hooks & CircleCI",
       "Collaborated with team using GitHub, Shortcut (like Jira), Slack, GitBooks, and Gather",
     ],
     date: "Jun 2022 - Nov 2023",
