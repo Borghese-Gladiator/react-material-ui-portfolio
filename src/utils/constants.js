@@ -293,6 +293,122 @@ export const projectList = [
 
 export const skillsList = [
   {
+    rootText: "Full Stack",
+    skills: [{
+      text: "Python",
+      devicon: "devicon-python-plain colored",
+    }, {
+      text: "JavaScript",
+      devicon: "devicon-javascript-plain colored",
+    }, {
+      text: "TypeScript",
+      devicon: "devicon-typescript-plain colored",
+    }, {
+      text: "Java",
+      devicon: "devicon-java-plain colored",
+    }, {
+      text: "Node.js",
+      devicon: "devicon-nodejs-plain colored",
+    }, {
+      text: "GraphQL",
+      devicon: "devicon-graphql-plain colored",
+    }]
+  }, 
+  {
+    rootText: "Frontend",
+    skills: [{
+      text: "React",
+      devicon: "devicon-react-plain colored",
+    }, {
+      text: "Next.js",
+      devicon: "devicon-nextjs-plain colored",
+    }, {
+      text: "Redux",
+      devicon: "devicon-redux-plain colored",
+    }, {
+      text: "Angular",
+      devicon: "devicon-angularjs-plain colored",
+    }, {
+      text: "HTML5",
+      devicon: "devicon-html5-plain colored",
+    }, {
+      text: "CSS3",
+      devicon: "devicon-css3-plain colored",
+    }, {
+      text: "SASS",
+      devicon: "devicon-sass-plain colored",
+    }]
+  },
+  {
+    rootText: "Backend",
+    skills: [{
+      text: "PostgreSQL",
+      devicon: "devicon-postgresql-plain colored",
+    }, {
+      text: "Kafka",
+      devicon: "devicon-apachekafka-plain colored",
+    }, {
+      text: "Redis",
+      devicon: "devicon-redis-plain colored",
+    }, {
+      text: "MongoDB",
+      devicon: "devicon-mongodb-plain colored",
+    }]
+  },
+  {
+    rootText: "DevOps",
+    skills: [{
+      text: "Kubernetes",
+      devicon: "devicon-kubernetes-plain colored",
+    }, {
+      text: "Docker",
+      devicon: "devicon-docker-plain colored",
+    }, {
+      text: "Grafana",
+      devicon: "devicon-grafana-plain colored",
+    }, {
+      text: "Linux",
+      devicon: "devicon-linux-plain colored",
+    }, {
+      text: "Ubuntu",
+      devicon: "devicon-ubuntu-plain colored",
+    }, {
+      text: "Bash",
+      devicon: "devicon-bash-plain colored",
+    }, {
+      text: "Jenkins",
+      devicon: "devicon-jenkins-plain colored",
+    },]
+  },
+  {
+    rootText: "Testing Automation",
+    skills: [{
+      text: "Selenium",
+      devicon: "devicon-selenium-plain colored",
+    }, {
+      text: "PyTest",
+      devicon: "devicon-pytest-plain colored",
+    }, {
+      text: "Mocha",
+      devicon: "devicon-mocha-plain colored",
+    }, {
+      text: "Jest",
+      devicon: "devicon-jest-plain colored",
+    },]
+  },
+]
+
+/*
+\section{SKILLS}
+\begin{tabularx}{\textwidth}{lX}
+    \textbf{Languages} & { Python, JavaScript/TypeScript (Node.js), Java, Bash, Batch/Powershell } \\
+    \textbf{Technologies} & { Git, React (Next.js), SQL (Postgres), REST/GraphQL, HTML5, CSS3/SASS, Linux (Ubuntu), \newline
+      AWS, Kubernetes, Helm, Docker, Grafana, Redis, Apache Kafka }
+\end{tabularx}
+
+ARCHIVE: 11/17
+export const skillsList = [
+  {
     rootText: "Frontend",
     skillGroupList: [
       {
@@ -536,6 +652,7 @@ export const skillsList = [
     ]
   },
 ]
+*/
 
 export const languageList = [
   {
@@ -550,8 +667,8 @@ export const languageList = [
   },
   {
     name: "Japanese",
-    proficiencyText: "Proficient",
-    value: 60
+    proficiencyText: "Elementary proficiency",
+    value: 30
   },
   {
     name: "Spanish",

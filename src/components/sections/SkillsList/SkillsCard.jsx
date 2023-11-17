@@ -2,9 +2,6 @@ import { styled } from '@mui/material/styles';
 import {
   Grid, Card, CardHeader, Typography
 } from "@mui/material";
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
 import React from 'react';
 
 const StyledCard = styled(Card)({
@@ -12,14 +9,33 @@ const StyledCard = styled(Card)({
   backgroundColor: "#fff",
   boxShadow: "0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%)",
 });
-const UnstyledImageList = styled(ImageList)({
-  margin: 0
-})
-const StyledGridItem = styled(Grid)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-}));
+const StyledIcon = styled('i')(() => ({
+  fontSize: 50
+}))
 
+export default function SkillsCard({ skillObj }) {
+  const { rootText, skills } = skillObj;
+  return (
+    <StyledCard p={3} sx={{ width: '100%'}}>
+      <CardHeader
+        title={rootText}
+      />
+      <Grid container pt={0} pl={2} pr={2} pb={2} spacing={2}>
+        {skills.map(({ text, devicon }, idx) => {
+          return (
+            <Grid item sx={{ display: "flex", flexDirection: 'column-reverse', alignItems: 'center' }}>
+              <Typography variant="caption">{text}</Typography>
+              <StyledIcon className={`${devicon} colored`}></StyledIcon>
+            </Grid>
+          );
+        })}
+      </Grid>
+    </StyledCard>
+  )
+}
+
+/*
+ARCHIVE: 11/17
 export default function SkillsCard({ skillObj }) {
   const { rootText, skillGroupList } = skillObj;
   return (
@@ -55,4 +71,5 @@ export default function SkillsCard({ skillObj }) {
     </StyledCard>
   )
 }
+*/
 // <ListSubheader component="div">{groupText}</ListSubheader>
