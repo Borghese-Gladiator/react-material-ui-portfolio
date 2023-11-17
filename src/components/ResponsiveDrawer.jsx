@@ -32,16 +32,16 @@ function ListItemExternalLink({ sidebarLink, visibleSection }) {
   const Icon = icon;
   return (
     <Link key={text} href={link} target="_blank" color="#333" underline="none">
-    <ListItem button>
-      <ListItemIcon>
-        <Icon sx={{ fontSize: 33 }} />
-      </ListItemIcon>
-      <ListItemText
-        disableTypography
-        primary={<Typography variant="body2" color="#333">{text}</Typography>}
-      />
-    </ListItem>
-  </Link>
+      <ListItem button>
+        <ListItemIcon>
+          <Icon sx={{ fontSize: 33 }} />
+        </ListItemIcon>
+        <ListItemText
+          disableTypography
+          primary={<Typography variant="body2" color="#333">{text}</Typography>}
+        />
+      </ListItem>
+    </Link>
   )
 }
 function ListItemScrollLink({ sidebarLink, visibleSection }) {
@@ -67,7 +67,7 @@ function ListItemScrollLink({ sidebarLink, visibleSection }) {
       </ListItem>
     </ScrollLink>
   )
-  
+
 }
 
 function ResponsiveDrawer(props) {
@@ -151,7 +151,11 @@ function ResponsiveDrawer(props) {
           }}
           sx={{
             display: displayObjMobile,
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+              overflowX: "hidden",  // TODO(11/17): formally fix scrollbar thingy
+            },
           }}
         >
           {drawer}
@@ -160,7 +164,11 @@ function ResponsiveDrawer(props) {
           variant="permanent"
           sx={{
             display: displayObjDesktop,
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+              overflowX: "hidden",  // TODO(11/17): formally fix scrollbar thingy
+            },
           }}
           open
         >
