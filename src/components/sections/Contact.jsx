@@ -62,7 +62,7 @@ export default function Contact() {
             }}>
               <LinkedInIcon />
             </Avatar>
-            <Typography ml={2} variant="subtitle1" color="primary">github.com/borghese-gladiator</Typography>
+            <Typography ml={2} variant="subtitle1" color="primary">in/timothyshee</Typography>
           </ListItem>
         </Link>
       </List>
