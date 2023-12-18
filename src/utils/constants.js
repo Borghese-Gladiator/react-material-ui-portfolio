@@ -668,11 +668,13 @@ export const languageList = [
   {
     name: "Japanese",
     proficiencyText: "Elementary proficiency",
-    value: 30
+    value: 40
   },
+  /*
   {
     name: "Spanish",
     proficiencyText: "Elementary proficiency",
     value: 30
   },
+  */
 ]
